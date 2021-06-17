@@ -1,0 +1,59 @@
+// *** Fuentes
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+$font-1: 'Nunito';
+$font-2: 'Montserrat';
+
+// *** Colores Corporativos
+
+$color-1: #2b9c88;
+$color-2: #172d54;
+$color-3: #1e4b65;
+$color-4: #ffffff;
+$color-5: #000000;
+
+// *** Colores Adicionales
+
+// *** Altos y Anchos
+$breakpoint-1: 90%;
+
+// Resets
+
+// *** Fuente Base 16px
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  // border: 1px solid red;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-1, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Mixins
+@mixin content {
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+}
+
+// Modulos
+@import 'navbar';
+@import 'about';
