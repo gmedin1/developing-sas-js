@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+/*** Reseteos */
+
+*,
+*::after,
+*::before {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/*** Servicios */
+
+.services {
+  align-items: center;
+  background-image: url(/images/adobestock_419741648.jpeg);
+  background-size: cover;
+  background-position-x: 60%;
+  color: #172d54;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.services .service__container:nth-child(3),
+.services .service__container:nth-child(4) {
+  align-self: flex-end;
+  margin-right: 15em;
+}
+
+.services__title {
+  font-size: 4em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+/*** Contenedor de Servicios */
+
+.service__container {
+  align-items: center;
+  display: flex;
+  padding: 3em 0;
+}
+
+/*** Burbuja */
+
+.bubble {
+  align-items: center;
+  animation: wave 5s linear infinite;
+  background-image: linear-gradient(
+    90deg,
+    #6f9cd9 0%,
+    #938bbd 50%,
+    #bb789f 100%
+  );
+  border-radius: 40% 60% 40% 60% / 60% 60% 40% 40%;
+  display: flex;
+  font-size: 16px;
+  flex-direction: column;
+  height: 16em;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 1.5em;
+  width: 16em;
+}
+
+.bubble:hover .service__item {
+  display: block;
+}
+
+.bubble__icon {
+  font-size: 3em;
+}
+
+.bubble__title {
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+}
+
+/*** Opciones */
+
+.service__list {
+  left: 100%;
+  margin-left: 1em;
+  position: absolute;
+}
+
+.service__item {
+  display: none;
+  padding: 1.5em 0;
+  transition: display ease 6s;
+  width: max-content;
+}
+
+.service__list .service__item:nth-child(2) {
+  margin-left: 1.5em;
+}
+
+/*** Animaciones */
+@keyframes wave {
+  12.5% {
+    border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%;
+  }
+  25% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  37.5% {
+    border-radius: 55% 45% 55% 45% / 45% 45% 55% 55%;
+  }
+  50% {
+    border-radius: 60% 40% 60% 40% / 40% 40% 60% 60%;
+  }
+  62.5% {
+    border-radius: 55% 45% 55% 45% / 45% 45% 55% 55%;
+  }
+  75% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  87.5% {
+    border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%;
+  }
+}
+
+/*** Media Queries */

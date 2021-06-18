@@ -1,18 +1,20 @@
 # Problemas a Resolver.
 
-[check] La propiedad 'top' del texto de la landing no esta bien definido, el alto del dispositivo afecta su versión responsive.
+() La propiedad 'top' del texto de la landing no esta bien definido, el alto del dispositivo afecta su versión responsive.
 
-[check] Ajustar los altos de las secciones, fijos? o variables según el contenido de la caja?
+() Ajustar los altos de las secciones, fijos? o variables según el contenido de la caja?
 
-[check] Ajustar las margenes y los breakpoints de la página.
+() Ajustar las margenes y los breakpoints de la página.
 
 Utilizar los de Bootstrap estaría !OK!
 
-[check] Acomodar la margen general de la página y los elementos a esa margen.
+() Acomodar la margen general de la página y los elementos a esa margen.
+
+() Añadir los elementos construidos como componentes.
 
 # Por Añadir
 
-[check] Cuando el usuario haga scroll en la pagina la navegación debe tener una animación.
+() Cuando el usuario haga scroll en la pagina la navegación debe tener una animación.
 
 # Falencias
 
