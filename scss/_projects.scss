@@ -1,0 +1,56 @@
+.projects {
+  background-color: $color-10;
+  margin: auto;
+  position: relative;
+  height: 100vh;
+  width: 95%;
+  .projects::after {
+    content: '';
+    display: block;
+    background-color: aquamarine;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+  }
+  .project {
+    display: flex;
+    padding: 10rem;
+    height: 100%;
+    width: 100%;
+  }
+  .project__col {
+    padding: 0 2rem;
+  }
+  .project__client {
+    padding: 3rem 5rem;
+    font-size: 70px;
+    font-weight: 800;
+    text-align: center;
+  }
+  .project__details {
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 8rem;
+  }
+  .col-3 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .project__img {
+    border-radius: 30px;
+    justify-self: center;
+    height: 260px;
+    width: 500px;
+  }
+}
+
+// *** Utilidades
+
+.project__col > .project__circle {
+  background-color: $color-1;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}

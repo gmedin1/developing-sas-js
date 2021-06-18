@@ -1,14 +1,56 @@
 .about {
   background-color: $color-5;
+  color: $color-4;
+
+  // *** Cinta.
   .about__ribbon {
-    color: $color-4;
+    padding: 10rem 0;
+  }
+  .ribbon__text {
     font-family: $font-2, sans-serif;
-    font-size: 60px;
-    font-weight: 600;
-    padding: 5rem 0;
-    position: relative;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    padding: 0 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2.5px $color-4;
+  }
+
+  // *** Tarjeta de Información
+  .about__data {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+  }
+  .about__card {
+    background-color: $color-6;
+    columns: 3;
+    gap: 4rem;
+    padding: 4rem 5rem;
+    width: 1000px;
+  }
+  .about__col {
+    break-inside: avoid;
+  }
+  .about__up,
+  .about__down {
+    font-weight: 800;
     text-align: center;
   }
-  .about__data {
+  .about__up {
+    font-size: 60px;
   }
+  .about__down {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+  }
+}
+
+// *** Utilidades
+.about__ribbon > .underline {
+  background-color: $color-7;
+  width: 980px;
 }

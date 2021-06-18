@@ -1,0 +1,21 @@
+.testimonials {
+  padding: 20rem;
+  &__title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+  }
+  .testimonials--container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.testimony {
+  border: 6px solid $color-3;
+  border-radius: 50px;
+  margin-top: 5rem;
+  height: 730px;
+  width: 430px;
+}

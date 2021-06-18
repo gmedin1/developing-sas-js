@@ -1,5 +1,5 @@
 // *** Fuentes
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 $font-1: 'Nunito';
 $font-2: 'Montserrat';
@@ -11,11 +11,16 @@ $color-2: #172d54;
 $color-3: #1e4b65;
 $color-4: #ffffff;
 $color-5: #000000;
+$color-6: #0c0e10;
+$color-7: #a62e00;
+$color-8: #172d54;
+$color-9: #8f8f8f;
+$color-10: #e8e8e8;
 
 // *** Colores Adicionales
 
 // *** Altos y Anchos
-$breakpoint-1: 90%;
+$breakpoint-1: 80%;
 
 // Resets
 
@@ -47,6 +52,13 @@ a {
   text-decoration: none;
 }
 
+// Utilidades
+
+.underline {
+  margin: 1.5rem auto;
+  height: 5px;
+}
+
 // Mixins
 @mixin content {
   left: 0;
@@ -57,3 +69,8 @@ a {
 // Modulos
 @import 'navbar';
 @import 'about';
+@import 'info';
+@import 'team';
+@import 'facts';
+@import 'projects';
+@import 'testimonials';

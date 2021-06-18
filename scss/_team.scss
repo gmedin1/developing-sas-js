@@ -1,0 +1,51 @@
+.team {
+  background-color: $color-5;
+  color: $color-4;
+  .team__title {
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+  }
+  .team__members {
+    align-items: center;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    padding: 10rem;
+  }
+  .member {
+    background: url(../img/avatar.jpg) center / cover no-repeat;
+    border-radius: 30px;
+    height: 550px;
+    position: relative;
+    width: 360px;
+  }
+  .member__info {
+    background: rgba($color-5, 0.66);
+    border-radius: 30px;
+    bottom: 0;
+    padding: 2rem;
+    position: absolute;
+    width: 100%;
+  }
+  .member__name,
+  .member__title {
+    text-align: center;
+  }
+  .member__name {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .member__title {
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+
+// *** Utilidades
+.team > .underline {
+  background-color: $color-3;
+  width: 380px;
+}
