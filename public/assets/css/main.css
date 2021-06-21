@@ -383,15 +383,147 @@ a {
     text-align: center;
     font-size: 60px;
     font-weight: 800; }
-  .testimonials .testimonials--container {
+  .testimonials__container {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
 
 .testimony {
+  align-items: center;
   border: 6px solid #1e4b65;
   border-radius: 50px;
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
   height: 730px;
+  justify-content: space-around;
+  margin-top: 5rem;
   width: 430px; }
+  .testimony__container {
+    height: 120px; }
+  .testimony__brand {
+    height: 100%; }
+  .testimony__text {
+    text-align: center; }
+
+/*** Servicios */
+.services {
+  align-items: center;
+  background-image: url(../img/services-background.jpeg);
+  background-size: cover;
+  background-position-x: 60%;
+  color: #172d54;
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.services .service__container:nth-child(3),
+.services .service__container:nth-child(4) {
+  align-self: flex-end;
+  margin-right: 15em; }
+
+.services__title {
+  font-size: 4em;
+  padding: 0.5em;
+  width: 100%; }
+
+/*** Contenedor de Servicios */
+.service__container {
+  align-items: center;
+  display: flex;
+  padding: 3em 0; }
+
+/*** Burbuja */
+.bubble {
+  align-items: center;
+  animation: wave 5s linear infinite;
+  background-image: linear-gradient(90deg, #6f9cd9 0%, #938bbd 50%, #bb789f 100%);
+  border-radius: 40% 60% 40% 60% / 60% 60% 40% 40%;
+  display: flex;
+  font-size: 16px;
+  flex-direction: column;
+  height: 16em;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 1.5em;
+  width: 16em; }
+
+.bubble:hover .service__item {
+  display: block; }
+
+.bubble__icon {
+  font-size: 3em; }
+
+.bubble__title {
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center; }
+
+/*** Opciones */
+.service__list {
+  left: 100%;
+  margin-left: 1em;
+  position: absolute; }
+
+.service__item {
+  display: none;
+  padding: 1.5em 0;
+  transition: display ease 6s;
+  width: max-content; }
+
+.service__list .service__item:nth-child(2) {
+  margin-left: 1.5em; }
+
+/*** Animaciones */
+@keyframes wave {
+  12.5% {
+    border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%; }
+  25% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  37.5% {
+    border-radius: 55% 45% 55% 45% / 45% 45% 55% 55%; }
+  50% {
+    border-radius: 60% 40% 60% 40% / 40% 40% 60% 60%; }
+  62.5% {
+    border-radius: 55% 45% 55% 45% / 45% 45% 55% 55%; }
+  75% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  87.5% {
+    border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%; } }
+
+/*** Media Queries */
+.process {
+  background-position: center;
+  background-size: cover;
+  border-radius: 32px;
+  color: #fff;
+  display: grid;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  grid-template-rows: repeat(9, 1fr);
+  height: 40em;
+  padding: 1.5em;
+  width: 22em; }
+
+.prism-1 {
+  background-image: url(../img/assets/black-prism.jpeg); }
+
+.prism-2 {
+  background-image: url(../img/assets/AdobeStock_438403214.jpeg); }
+
+.prism-3 {
+  background-image: url(../img/assets/AdobeStock_419358000.jpeg); }
+
+.process__logo {
+  height: 6em; }
+
+.process__title {
+  font-size: 2em;
+  font-weight: bold;
+  grid-row: 4 / 5;
+  text-align: center; }
+
+.process__description {
+  font-size: 1.5em;
+  grid-row: 6 / 10;
+  text-align: center; }

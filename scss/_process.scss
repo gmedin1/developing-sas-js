@@ -1,0 +1,42 @@
+.process {
+  background-position: center;
+  background-size: cover;
+  border-radius: 32px;
+  color: #fff;
+  display: grid;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  grid-template-rows: repeat(9, 1fr);
+  height: 40em;
+  padding: 1.5em;
+  width: 22em;
+}
+
+.prism-1 {
+  background-image: url(../img/assets/black-prism.jpeg);
+}
+
+.prism-2 {
+  background-image: url(../img/assets/AdobeStock_438403214.jpeg);
+}
+
+.prism-3 {
+  background-image: url(../img/assets/AdobeStock_419358000.jpeg);
+}
+
+.process__logo {
+  height: 6em;
+}
+
+.process__title {
+  font-size: 2em;
+  font-weight: bold;
+  grid-row: 4 / 5;
+  text-align: center;
+}
+
+.process__description {
+  font-size: 1.5em;
+  grid-row: 6 / 10;
+  text-align: center;
+}
