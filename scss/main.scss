@@ -9,6 +9,9 @@ $font-2: 'Montserrat';
 $color-1: #2b9c88;
 $color-2: #172d54;
 $color-3: #1e4b65;
+
+// *** Colores Adicionales
+
 $color-4: #ffffff;
 $color-5: #000000;
 $color-6: #0c0e10;
@@ -17,10 +20,11 @@ $color-8: #172d54;
 $color-9: #8f8f8f;
 $color-10: #e8e8e8;
 
-// *** Colores Adicionales
-
 // *** Altos y Anchos
-$breakpoint-1: 80%;
+
+$breakpoint-1: 1400px;
+$breakpoint-2: 980px;
+$breakpoint-3: 720px;
 
 // Resets
 
@@ -33,7 +37,7 @@ html {
 *,
 *::after,
 *::before {
-  // border: 1px solid red;
+  // outline: 1px solid red;
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -54,16 +58,15 @@ a {
 
 // Utilidades
 
-.underline {
-  margin: 1.5rem auto;
-  height: 5px;
-}
+// .underline {
+//   margin: 1.5rem auto;
+//   height: 5px;
+// }
 
 // Mixins
 @mixin content {
-  left: 0;
+  inset: auto 0;
   margin: 0 auto;
-  right: 0;
 }
 
 // Modulos

@@ -12,9 +12,13 @@ Utilizar los de Bootstrap estaría !OK!
 
 () Añadir los elementos construidos como componentes.
 
+() Precargar las imagenes del carrousel.
+
 # Por Añadir
 
 () Cuando el usuario haga scroll en la pagina la navegación debe tener una animación.
+
+() Fuentes unificadas para los parrafos y titulos.
 
 # Falencias
 
