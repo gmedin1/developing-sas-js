@@ -6,6 +6,7 @@ html {
 *,
 *::after,
 *::before {
+  outline: 1px solid red;
   box-sizing: inherit;
   margin: 0;
   padding: 0; }
@@ -211,7 +212,7 @@ a {
   flex-direction: column;
   font-size: 16px;
   justify-content: center;
-  padding: 4em 2em; }
+  padding: 6em; }
   .reference__card {
     align-items: center;
     background-color: #ffffff;
@@ -240,7 +241,7 @@ a {
     font-size: 2em;
     font-weight: 600; }
   .reference__text {
-    color: #8f8f8f;
+    color: #e0e0e0;
     letter-spacing: 1px;
     margin: 2rem 0; }
   .reference__img {
@@ -267,46 +268,53 @@ a {
     font-weight: 800;
     text-align: center; }
   .info__text {
-    font-size: 1.2em;
+    color: #e0e0e0;
+    letter-spacing: 1px;
     text-align: center; }
 
 .team {
   background-color: #000000;
-  color: #ffffff; }
-  .team .team__title {
-    font-size: 60px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 4em 0; }
+  .team__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4em;
     font-weight: 800;
     text-align: center; }
-  .team .team__members {
-    align-items: center;
+  .team__container {
     display: grid;
-    gap: 4rem;
+    gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
-    padding: 10rem; }
-  .team .member {
-    background: url(../img/avatar.jpg) center/cover no-repeat;
-    border-radius: 30px;
-    height: 550px;
-    position: relative;
-    width: 360px; }
-  .team .member__info {
-    background: rgba(0, 0, 0, 0.66);
-    border-radius: 30px;
+    padding: 2em;
+    place-content: center;
+    margin: 4em auto;
+    max-width: 1400px; }
+
+.member {
+  background: url(../img/avatar.jpg) center/cover no-repeat;
+  border-radius: 1em;
+  height: 30em;
+  position: relative;
+  width: 20em; }
+  .member__info {
+    background: #0c0e10;
+    border-radius: 1em;
     bottom: 0;
-    padding: 2rem;
+    padding: 1rem;
     position: absolute;
     width: 100%; }
-  .team .member__name,
-  .team .member__title {
-    text-align: center; }
-  .team .member__name {
-    font-size: 30px;
+    .member__info > * {
+      text-align: center; }
+  .member__name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
     font-weight: 800; }
-  .team .member__title {
-    font-size: 25px;
-    font-weight: 400; }
+  .member__title {
+    font-weight: 600;
+    letter-spacing: 1px; }
 
 .team > .underline {
   background-color: #1e4b65;
@@ -316,81 +324,83 @@ a {
   background-color: #000000;
   color: #ffffff;
   display: grid;
+  font-size: 16px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 5rem;
-  padding: 10rem;
-  height: 1000px; }
+  gap: 2em;
+  justify-content: center;
+  padding: 2em;
+  place-content: center;
+  margin: auto; }
   .facts .fact {
-    display: flex; }
-  .facts .fact__bar {
-    border-radius: 50px;
-    margin-right: 2rem;
-    height: 150px;
-    width: 35px; }
-  .facts .bar-1 {
-    background-color: #2b9c88; }
-  .facts .bar-2 {
-    background-color: #172d54; }
-  .facts .bar-3 {
-    background-color: #1e4b65; }
-  .facts .bar-4 {
-    background-color: #a62e00; }
-  .facts .fact__number {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
-    font-weight: 900;
-    margin-top: 2rem; }
-  .facts .fact__text {
-    font-size: 24px;
-    font-weight: 600;
-    width: 390px; }
+    display: flex;
+    padding: 0 4em; }
+    .facts .fact__bar {
+      border-radius: 3em;
+      height: 160px;
+      width: 32px; }
+    .facts .fact__left, .facts .fact__right {
+      margin: 2em; }
+    .facts .fact__number {
+      font-family: "Montserrat", sans-serif;
+      font-size: 4em;
+      font-weight: 800;
+      margin-top: 0.5em; }
+    .facts .fact__text {
+      color: #e0e0e0;
+      letter-spacing: 1px; }
+
+.bar-1 {
+  background-color: #2b9c88; }
+
+.bar-2 {
+  background-color: #172d54; }
+
+.bar-3 {
+  background-color: #1e4b65; }
+
+.bar-4 {
+  background-color: #a62e00; }
 
 .projects {
-  background-color: #e8e8e8;
+  font-size: 16px;
   margin: auto;
+  padding: 0 2em;
   position: relative;
-  height: 100vh;
-  width: 95%; }
-  .projects .projects::after {
-    content: '';
-    display: block;
-    background-color: aquamarine;
-    position: absolute;
-    height: 8px;
-    width: 100%; }
+  height: 90vh;
+  width: 90vw; }
   .projects .project {
-    display: flex;
-    padding: 10rem;
+    background-color: #e0e0e0;
+    box-shadow: 20px 20px 0px 5px #2b9c88;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 3fr;
     height: 100%;
     width: 100%; }
-  .projects .project__col {
-    padding: 0 2rem; }
-  .projects .project__client {
-    padding: 3rem 5rem;
-    font-size: 70px;
-    font-weight: 800;
-    text-align: center; }
-  .projects .project__details {
-    font-size: 35px;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 8rem; }
-  .projects .col-3 {
-    align-items: center;
-    display: flex;
-    justify-content: center; }
-  .projects .project__img {
-    border-radius: 30px;
-    justify-self: center;
-    height: 260px;
-    width: 500px; }
-
-.project__col > .project__circle {
-  background-color: #2b9c88;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px; }
+    .projects .project .col-1 {
+      grid-row: 1 / 2;
+      grid-column: 1 / 7;
+      padding: 2rem; }
+    .projects .project__client {
+      font-family: "Montserrat", sans-serif;
+      font-size: 4em;
+      font-weight: 800;
+      text-align: center; }
+    .projects .project .col-2 {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      padding: 2rem; }
+    .projects .project__circle {
+      background-color: #2b9c88;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px; }
+    .projects .project .col-3 {
+      grid-column: 2 / 7; }
+    .projects .project__img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%; }
 
 .testimonials {
   padding: 20rem; }

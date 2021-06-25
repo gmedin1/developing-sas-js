@@ -18,7 +18,7 @@ $color-6: #0c0e10;
 $color-7: #a62e00;
 $color-8: #172d54;
 $color-9: #8f8f8f;
-$color-10: #e8e8e8;
+$color-10: #e0e0e0;
 
 // *** Altos y Anchos
 
@@ -37,7 +37,7 @@ html {
 *,
 *::after,
 *::before {
-  // outline: 1px solid red;
+  outline: 1px solid red;
   box-sizing: inherit;
   margin: 0;
   padding: 0;

@@ -1,48 +1,72 @@
+// Team
+
 .team {
   background-color: $color-5;
   color: $color-4;
-  .team__title {
-    font-size: 60px;
+  font-size: 16px;
+  padding: 4em 0;
+  // *** Titulo
+  &__title {
+    font-family: $font-2, sans-serif;
+    font-size: 4em;
     font-weight: 800;
     text-align: center;
   }
-  .team__members {
-    align-items: center;
+
+  // *** Contenedor
+
+  &__container {
     display: grid;
-    gap: 4rem;
+    gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
-    padding: 10rem;
-  }
-  .member {
-    background: url(../img/avatar.jpg) center / cover no-repeat;
-    border-radius: 30px;
-    height: 550px;
-    position: relative;
-    width: 360px;
-  }
-  .member__info {
-    background: rgba($color-5, 0.66);
-    border-radius: 30px;
-    bottom: 0;
-    padding: 2rem;
-    position: absolute;
-    width: 100%;
-  }
-  .member__name,
-  .member__title {
-    text-align: center;
-  }
-  .member__name {
-    font-size: 30px;
-    font-weight: 800;
-  }
-  .member__title {
-    font-size: 25px;
-    font-weight: 400;
+    padding: 2em;
+    place-content: center;
+    margin: 4em auto;
+    max-width: $breakpoint-1;
   }
 }
+
+// Member
+
+.member {
+  background: url(../img/avatar.jpg) center / cover no-repeat;
+  border-radius: 1em;
+  height: 30em;
+  position: relative;
+  width: 20em;
+  
+  // *** Informacion
+
+  &__info {
+    background: $color-6;
+    border-radius: 1em;
+    bottom: 0;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    
+    & > * {
+      text-align: center;
+    }
+  }
+
+  // Nombre y Cargo
+
+  &__name {
+    font-family: $font-2, sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+
+  &__title {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+
 
 // *** Utilidades
 .team > .underline {
