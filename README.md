@@ -14,6 +14,8 @@ Utilizar los de Bootstrap estaría !OK!
 
 () Precargar las imagenes del carrousel.
 
+() Estandarizar los paddings de cada sección para que sea equitativo entre secciones.
+
 # Por Añadir
 
 () Cuando el usuario haga scroll en la pagina la navegación debe tener una animación.
