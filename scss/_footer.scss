@@ -1,0 +1,64 @@
+.footer {
+  background: linear-gradient(90deg, $color-11);
+  color: $color-4;
+  font-size: 16px;
+  // *** Contenedor
+  &__container {
+    display: grid;
+    gap: 4em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 4em 2em;
+    margin: auto;
+    max-width: $breakpoint-1;
+  }
+  // *** Wrapper
+  &__wrapper {
+    & > * {
+      text-align: center;
+    }
+  }
+  // *** Seccion Top Left
+  &__container &__wrapper:nth-child(1) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  // *** Seccion Top Right
+  &__title {
+    font-family: $font-2, sans-serif;
+    font-size: 3em;
+  }
+  &__text {
+    letter-spacing: 1px;
+  }
+  // *** Seccion Bot Left
+  &__contact {
+    font-family: $font-2, sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+  &__list {
+    letter-spacing: 1px;
+    margin: 1em 0 2.5em 0;
+  }
+  // *** Seccion Bot Right
+  &__visit {
+    font-family: $font-2, sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+  &__address {
+    letter-spacing: 1px;
+    margin: 1em 0 2.5em 0;
+    & > li {
+      padding: 0.5em 0;
+    }
+  }
+  // *** Copyright
+  &__copyright {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}

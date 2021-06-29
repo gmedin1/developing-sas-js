@@ -1,29 +1,4 @@
-    <section id="processes" class="processes">
-      <article class="process prism-1">
-        <img src="../images/logo/graphic.png" alt="" class="process__logo" />
-        <h3 class="process__title">Análisis del Proyecto</h3>
-        <p class="process__description">
-          Entendemos las necesidades de tu negocio, gracias a la experiencia y
-          talento de nuestros colaboradores.
-        </p>
-      </article>
-      <article class="process prism-2">
-        <img src="../images/logo/graphic.png" alt="" class="process__logo" />
-        <h3 class="process__title">Análisis del Proyecto</h3>
-        <p class="process__description">
-          Entendemos las necesidades de tu negocio, gracias a la experiencia y
-          talento de nuestros colaboradores.
-        </p>
-      </article>
-      <article class="process prism-3">
-        <img src="../images/logo/graphic.png" alt="" class="process__logo" />
-        <h3 class="process__title">Análisis del Proyecto</h3>
-        <p class="process__description">
-          Entendemos las necesidades de tu negocio, gracias a la experiencia y
-          talento de nuestros colaboradores.
-        </p>
-      </article>
-    </section>
+
     <script src="./public/assets/js/burger.js"></script>
     <script src="./public/assets/js/carousel.js"></script>
     <script src="./public/assets/js/data.js"></script>

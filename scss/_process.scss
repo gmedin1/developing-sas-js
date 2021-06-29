@@ -1,42 +1,99 @@
-.process {
-  background-position: center;
-  background-size: cover;
-  border-radius: 32px;
-  color: #fff;
-  display: grid;
-  font-family: 'Nunito', sans-serif;
+// *** Procesos
+
+.processes {
+  color: $color-4;
   font-size: 16px;
-  grid-template-rows: repeat(9, 1fr);
-  height: 40em;
-  padding: 1.5em;
-  width: 22em;
+  padding: 4em 2em;
+  margin: auto;
+  max-width: $breakpoint-1;
+
+  // Titulo
+
+  &__title {
+    color: $color-5;
+    font-family: $font-2, sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  // Wrapper
+
+  &__wrapper {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  // *** Control de Proceso
+
+  & .process:nth-child(4) {
+    grid-column: 1 / 3;
+  }
 }
 
+// *** Proceso
+
+.process {
+  height: 35em;
+  padding: 2em;
+
+  // *** Wrapper
+
+  &__wrapper {
+    align-items: center;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 2em;
+  }
+
+  // *** Logo
+
+  &__logo {
+    height: 4em;
+  }
+
+  // *** Titulo
+
+  &__title {
+    font-family: $font-2, sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  // *** Descripcion
+
+  &__description {
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 4em;
+  }
+}
+
+// *** Control de Imagenes
+
 .prism-1 {
-  background-image: url(../img/assets/black-prism.jpeg);
+  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
 }
 
 .prism-2 {
-  background-image: url(../img/assets/AdobeStock_438403214.jpeg);
+  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
 }
 
 .prism-3 {
-  background-image: url(../img/assets/AdobeStock_419358000.jpeg);
+  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
 }
 
-.process__logo {
-  height: 6em;
+.prism-4 {
+  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
 }
 
-.process__title {
-  font-size: 2em;
-  font-weight: bold;
-  grid-row: 4 / 5;
-  text-align: center;
-}
-
-.process__description {
-  font-size: 1.5em;
-  grid-row: 6 / 10;
-  text-align: center;
+.prism-5 {
+  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
 }
