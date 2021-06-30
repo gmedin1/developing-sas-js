@@ -663,3 +663,28 @@ a {
     font-size: 0.8em;
     letter-spacing: 1px;
     text-align: center; }
+
+.stack {
+  font-size: 16px;
+  padding: 4em 2em;
+  margin: auto;
+  max-width: 1400px; }
+  .stack__title {
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 2rem 0; }
+  .stack__wrapper {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr); }
+  .stack__card {
+    align-items: center;
+    display: flex;
+    margin: 2em; }
+  .stack__icon {
+    border: 1px solid black;
+    font-size: 4em;
+    padding: 0.5em;
+    text-align: center;
+    width: 3em; }

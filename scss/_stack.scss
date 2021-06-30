@@ -1,0 +1,43 @@
+.stack {
+  font-size: 16px;
+  padding: 4em 2em;
+  margin: auto;
+  max-width: $breakpoint-1;
+
+  // *** Titulo
+
+  &__title {
+    font-size: 2em;
+    font-family: $font-2, sans-serif;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  // *** Wrapper
+
+  &__wrapper {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  // *** Cards
+
+  &__card {
+    align-items: center;
+    display: flex;
+    margin: 2em;
+  }
+
+  // *** Icono
+
+  &__icon {
+    border: 1px solid black;
+    font-size: 4em;
+    padding: 0.5em;
+    text-align: center;
+    width: 3em;
+  }
+
+  // *** Texto
+}
