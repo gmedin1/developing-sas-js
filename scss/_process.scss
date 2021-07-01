@@ -2,42 +2,59 @@
 
 .processes {
   color: $color-4;
-  font-size: 16px;
+  font-size: $base-1;
   padding: 4em 2em;
   margin: auto;
   max-width: $breakpoint-1;
 
-  // Titulo
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-3;
+  }
+
+  // *** Titulo
 
   &__title {
     color: $color-5;
     font-family: $font-2, sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 800;
     padding: 1em 0;
     text-align: center;
   }
 
-  // Wrapper
+  // ***  Wrapper
 
   &__wrapper {
     display: grid;
     gap: 2em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
+    @include respond-to('phone') {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+    }
   }
 
   // *** Control de Proceso
 
   & .process:nth-child(4) {
     grid-column: 1 / 3;
+
+    @include respond-to('phone') {
+      grid-column: 1;
+    }
   }
 }
 
 // *** Proceso
 
 .process {
-  height: 35em;
+  height: 32em;
   padding: 2em;
 
   // *** Wrapper
@@ -50,6 +67,14 @@
     height: 100%;
     justify-content: space-between;
     padding: 2em;
+
+    & > * {
+      margin: 1em;
+    }
+
+    @include respond-to('phone') {
+      padding: 0;
+    }
   }
 
   // *** Logo

@@ -5,11 +5,20 @@
   background-color: $color-5;
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: $base-1;
   justify-content: center;
-  padding: 6em;
+  padding: 4em 2em;
+
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-3;
+  }
 
   // *** Tarjeta
+
   &__card {
     align-items: center;
     background-color: $color-4;
@@ -17,17 +26,33 @@
     color: $color-8;
     display: flex;
     justify-content: space-between;
-    height: 35em;
+    height: 30em;
     padding: 4em;
     max-width: $breakpoint-1;
     width: 100%;
+
+    @include respond-to('phone') {
+      flex-direction: column;
+      padding: 1.1em;
+      height: fit-content;
+    }
   }
+
+  // *** Bloques de la Tarjeta
 
   &__left,
   &__right {
     height: 100%;
     margin: 0 2em;
     width: 50%;
+
+    @include respond-to('phone') {
+      width: 100%;
+
+      & > * {
+        text-align: center;
+      }
+    }
   }
 
   &__left {
@@ -36,27 +61,41 @@
     justify-content: space-around;
   }
 
-  // Izquierda
+  &__right {
+    @include respond-to('phone') {
+      display: none;
+    }
+  }
+
+  // *** Textos
 
   &__title {
     font-family: $font-2, sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 800;
   }
 
   &__reference {
     font-family: $font-2, sans-serif;
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 800;
+
+    @include respond-to('phone') {
+      margin-top: 1em;
+    }
   }
 
   &__text {
-    color: $color-10;
+    color: $color-9;
     letter-spacing: 1px;
-    margin: 2rem 0;
+    margin: 2em 0;
+
+    @include respond-to('phone') {
+      margin-bottom: 0;
+    }
   }
 
-  // Derecha
+  // *** Imagen
 
   &__img {
     height: inherit;
@@ -72,16 +111,25 @@
   display: flex;
   color: $color-4;
   justify-content: center;
-  padding: 4em;
+  padding: 2em;
   margin-top: 4em;
   max-width: $breakpoint-1;
   width: 100%;
+
+  @include respond-to('phone') {
+    flex-direction: column;
+  }
 
   &__left,
   &__right {
     height: 100%;
     margin: 2em;
     width: 50%;
+
+    @include respond-to('phone') {
+      margin: 2em 0;
+      width: 100%;
+    }
   }
 
   // Derecha

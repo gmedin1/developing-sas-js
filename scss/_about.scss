@@ -1,11 +1,17 @@
 // *** Cinta.
+
 .ribbon {
-  padding: 6em 0;
+  padding: 2em;
+
+  @include respond-to('phone') {
+    padding: 2em 0;
+  }
+
   // *** Texto de la Cinta.
+
   &__text {
-    font-size: 5em;
-    letter-spacing: 0.2em;
-    padding: 0 2em;
+    font-size: 6em;
+    letter-spacing: 0.1em;
     text-align: center;
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
@@ -14,12 +20,37 @@
     -moz-text-stroke: 3px $color-4;
     -o-text-fill-color: transparent;
     -o-text-stroke: 3px $color-4;
+
+    @include respond-to('tablet') {
+      font-size: 4em;
+    }
+
+    @include respond-to('phone') {
+      font-size: 2.5em;
+      -webkit-text-fill-color: $color-4;
+      -webkit-text-stroke: 0;
+      -moz-text-fill-color: $color-4;
+      -moz-text-stroke: 0;
+      -o-text-fill-color: $color-4;
+      -o-text-stroke: 0;
+    }
   }
+
+  // *** Delineado
+
   & > .underline {
     background-color: $color-7;
     margin: auto;
     height: 3px;
     width: 30em;
+
+    @include respond-to('tablet') {
+      width: 25em;
+    }
+
+    @include respond-to('phone') {
+      width: 20em;
+    }
   }
 }
 
@@ -27,34 +58,60 @@
   background-color: $color-5;
   color: $color-4;
   font-family: $font-2, sans-serif;
-  font-size: 16px;
+  font-size: $base-1;
   font-weight: 800;
   padding: 4em 0;
 
-  // *** Tarjetas
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-3;
+  }
+
+  // *** Data
+
   &__data {
     align-items: center;
     display: flex;
     justify-content: center;
     padding: 0 2em;
-    margin: 15em auto;
+    margin: 10em auto 6em auto;
     max-width: $breakpoint-1;
   }
+
+  // *** Tarjetas
+
   &__card {
     background-color: $color-6;
     columns: 3;
     gap: 2em;
-    padding: 5em;
+    padding: 4em;
+
+    @include respond-to('phone') {
+      columns: 1;
+    }
   }
+
+  // *** Columnas
+
   &__col {
     break-inside: avoid;
+
+    @include respond-to('phone') {
+      margin: 2em 0;
+    }
   }
+
   &__col > * {
     text-align: center;
   }
+
   &__up {
     font-size: 4em;
   }
+
   &__down {
     font-size: 2.5em;
   }

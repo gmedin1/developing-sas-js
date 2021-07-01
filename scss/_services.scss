@@ -2,14 +2,24 @@
 
 .services {
   color: $color-8;
-  font-size: 16px;
-  margin: 2em 0;
+  font-size: $base-1;
+  margin: 4em 0;
+
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-2;
+  }
+
   &__title {
     font-family: $font-2, sans-serif;
-    font-size: 4em;
-    padding: 0.5em;
+    font-size: 3em;
     text-align: center;
+    margin-bottom: 1em;
   }
+
   &__container {
     background: url(../img/services-background.jpeg) center / cover no-repeat;
   }
@@ -66,6 +76,10 @@
 .services .bubble:nth-child(2),
 .services .bubble:nth-child(3) {
   align-self: flex-end;
+
+  @include respond-to('phone') {
+    align-self: center;
+  }
 }
 
 /*** Opciones */
@@ -73,6 +87,10 @@
 .bubble:hover .service__item {
   opacity: 100;
   transform: translateX(200%);
+
+  @include respond-to('phone') {
+    transform: translateY(200%);
+  }
 }
 
 .bubble:hover .service__item:nth-child(1) {
@@ -90,6 +108,13 @@
 .service__list {
   position: absolute;
   right: 2em;
+
+  @include respond-to('phone') {
+    display: flex;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 .service__item {
@@ -100,13 +125,22 @@
   transition: all 0.3s ease;
   width: max-content;
   z-index: -1;
+
+  @include respond-to('phone') {
+    padding: 0 0.5em;
+  }
 }
 
 .service__list .service__item:nth-child(2) {
   margin-left: 1em;
+
+  @include respond-to('phone') {
+    margin-left: 0;
+  }
 }
 
 /*** Animaciones */
+
 @keyframes wave {
   12.5% {
     border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%;
@@ -130,5 +164,3 @@
     border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%;
   }
 }
-
-/*** Media Queries */

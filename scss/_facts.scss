@@ -1,35 +1,49 @@
-// Hecho
+// *** Hecho
 
 .facts {
   background-color: $color-5;
   color: $color-4;
   display: grid;
-  font-size: 16px;
+  font-size: $base-1;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2em;
   justify-content: center;
-  padding: 2em;
+  padding: 4em 2em;
   place-content: center;
   margin: auto;
-  
-  // Tarjeta
+
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-2;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  // *** Tarjeta
 
   .fact {
     display: flex;
     padding: 0 4em;
-    
-    // Barras Laterales
-    
+
+    @include respond-to('phone') {
+      padding: 0;
+    }
+
+    // *** Barras Laterales
+
     &__bar {
-      border-radius: 3em;
-      height: 160px;
-      width: 32px;
+      border-radius: 2em;
+      height: 10em;
+      width: 2em;
     }
 
     // *** Derecha / Izquierda
-    
-    &__left, 
+
+    &__left,
     &__right {
       margin: 2em;
     }

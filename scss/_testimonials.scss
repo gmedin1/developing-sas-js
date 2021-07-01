@@ -1,10 +1,18 @@
 // Testimonios
 
 .testimonials {
-  font-size: 16px;
+  font-size: $base-1;
   margin: auto;
   max-width: $breakpoint-1;
   padding: 4em 2em;
+
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-3;
+  }
 
   // Titulo
 
@@ -23,6 +31,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4em;
+
+    @include respond-to('phone') {
+      grid-template-columns: 1fr;
+      gap: 2em;
+    }
   }
 }
 
@@ -40,6 +53,18 @@
   padding: 2em;
   transition: all 0.6s ease;
   width: 25em;
+
+  @include respond-to('tablet') {
+    height: 30em;
+    margin: 2em auto;
+    padding: 1em;
+    width: fit-content;
+  }
+
+  @include respond-to('phone') {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
 
   // Marcas
 
@@ -75,18 +100,34 @@
 
 .testimonials__container .testimony:nth-child(1) {
   transform: rotateZ(15deg);
+
+  @include respond-to('phone') {
+    transform: rotateZ(0deg);
+  }
 }
 
 .testimonials__container .testimony:nth-child(2) {
   transform: rotateZ(-15deg);
+
+  @include respond-to('phone') {
+    transform: rotateZ(0deg);
+  }
 }
 
 .testimonials__container .testimony:nth-child(3) {
   transform: rotateZ(-15deg);
+
+  @include respond-to('phone') {
+    transform: rotateZ(0deg);
+  }
 }
 
 .testimonials__container .testimony:nth-child(4) {
   transform: rotateZ(15deg);
+
+  @include respond-to('phone') {
+    transform: rotateZ(0deg);
+  }
 }
 
 .testimonials__container .testimony:hover {

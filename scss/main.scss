@@ -21,19 +21,35 @@ $color-5: #000000;
 $color-6: #0c0e10;
 $color-7: #a62e00;
 $color-8: #172d54;
-$color-9: #8f8f8f;
+$color-9: #444444;
 $color-10: #e0e0e0;
 $color-11: #162b33 0%, #203942 50%, #264754 100%;
 
-// *** Altos y Anchos
+// *** Bases
+
+$base-1: 16px;
+$base-2: 14px;
+$base-3: 12px;
+
+// *** Breakpoints
 
 $breakpoint-1: 1400px;
 $breakpoint-2: 980px;
 $breakpoint-3: 720px;
 
-// Resets
+$breakpoints: (
+  'phone': (
+    max-width: 720px,
+  ),
+  'tablet': (
+    max-width: 980px,
+  ),
+  'desktop': (
+    max-width: 1400px,
+  ),
+) !default;
 
-// *** Fuente Base 16px
+// Resets
 
 html {
   box-sizing: border-box;
@@ -66,6 +82,16 @@ a {
 @mixin content {
   inset: auto 0;
   margin: 0 auto;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{ inspect(map-get($breakpoints, $breakpoint)) } {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint Not Found! 404";
+  }
 }
 
 // *** Modulos
