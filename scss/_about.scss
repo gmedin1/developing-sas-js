@@ -2,6 +2,8 @@
 
 .ribbon {
   padding: 2em;
+  position: relative;
+  z-index: 1000;
 
   @include respond-to('phone') {
     padding: 2em 0;
@@ -14,12 +16,6 @@
     letter-spacing: 0.1em;
     text-align: center;
     text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 3px $color-4;
-    -moz-text-fill-color: transparent;
-    -moz-text-stroke: 3px $color-4;
-    -o-text-fill-color: transparent;
-    -o-text-stroke: 3px $color-4;
 
     @include respond-to('tablet') {
       font-size: 4em;
@@ -27,12 +23,6 @@
 
     @include respond-to('phone') {
       font-size: 2.5em;
-      -webkit-text-fill-color: $color-4;
-      -webkit-text-stroke: 0;
-      -moz-text-fill-color: $color-4;
-      -moz-text-stroke: 0;
-      -o-text-fill-color: $color-4;
-      -o-text-stroke: 0;
     }
   }
 
@@ -61,6 +51,7 @@
   font-size: $base-1;
   font-weight: 800;
   padding: 4em 0;
+  position: relative;
 
   @include respond-to('tablet') {
     font-size: $base-2;
@@ -77,8 +68,10 @@
     display: flex;
     justify-content: center;
     padding: 0 2em;
+    position: relative;
     margin: 10em auto 6em auto;
     max-width: $breakpoint-1;
+    z-index: 1000;
   }
 
   // *** Tarjetas
@@ -115,4 +108,10 @@
   &__down {
     font-size: 2.5em;
   }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }

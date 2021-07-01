@@ -1,12 +1,12 @@
 // Scope Global
-var $ = window.document;
 var count = 0;
+const SPEED = 6000;
 
 function gallery() {
   // Lista de Slides.
-  const slides = $.querySelectorAll('.slider__slide');
+  const slides = document.querySelectorAll('.slider__slide');
   // Lista de Puntos
-  const dots = $.querySelectorAll('.slider__dot');
+  const dots = document.querySelectorAll('.control__dot');
 
   // Esconder la Slide Actual y Quitar el Relleno del Punto.
   slides[count].classList.remove('show');
@@ -24,4 +24,4 @@ function gallery() {
   dots[count].classList.add('fill');
 }
 
-setInterval(gallery, 5000);
+setInterval(gallery, SPEED);

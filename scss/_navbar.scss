@@ -118,10 +118,11 @@
   // *** Slides
 
   .slider__slide {
-    display: none;
     height: inherit;
     left: 0;
     position: absolute;
+    transition: opacity 1.2s ease;
+    opacity: 0;
     width: 100%;
     z-index: -1;
   }
@@ -133,6 +134,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     max-width: $breakpoint-1;
     padding: 2em;
     position: absolute;
@@ -156,6 +158,15 @@
     @include respond-to('phone') {
       font-size: 3em;
     }
+  }
+
+  // *** Lista
+
+  .slider__list {
+    color: $color-4;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    text-align: center;
   }
 }
 
@@ -201,22 +212,11 @@
   }
 }
 
-// Keyframes
-
-@keyframes fade-in {
-  0% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 // *** Utilidades
 
 .show {
-  animation: fade-in 1.2s ease;
-  display: block !important;
+  transition: opacity 1.2s ease;
+  opacity: 1 !important;
 }
 
 .open {

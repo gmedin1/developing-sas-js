@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.0"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
   }
 }
