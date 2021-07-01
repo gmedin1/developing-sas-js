@@ -1,8 +1,16 @@
 .stack {
-  font-size: 16px;
+  font-size: $base-1;
   padding: 4em 2em;
   margin: auto;
   max-width: $breakpoint-1;
+
+  @include respond-to('tablet') {
+    font-size: $base-2;
+  }
+
+  @include respond-to('phone') {
+    font-size: $base-3;
+  }
 
   // *** Titulo
 
@@ -10,15 +18,22 @@
     font-size: 2em;
     font-family: $font-2, sans-serif;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1em 0;
   }
 
   // *** Wrapper
 
   &__wrapper {
     display: grid;
-    gap: 2em;
     grid-template-columns: repeat(3, 1fr);
+
+    @include respond-to('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to('phone') {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   // *** Cards
@@ -32,12 +47,35 @@
   // *** Icono
 
   &__icon {
-    border: 1px solid black;
-    font-size: 4em;
-    padding: 0.5em;
-    text-align: center;
-    width: 3em;
+    border: 3px solid black;
+    padding: 1em;
+    width: 6em;
   }
 
   // *** Texto
+
+  &__text {
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+  border: 3px solid $color-1;
+}
+
+.icon-4,
+.icon-5,
+.icon-6 {
+  border: 3px solid $color-2;
+}
+
+.icon-7,
+.icon-8,
+.icon-9 {
+  border: 3px solid $color-3;
 }
