@@ -6,7 +6,6 @@ html {
 *,
 *::after,
 *::before {
-  outline: 1px solid red;
   box-sizing: inherit;
   margin: 0;
   padding: 0; }
