@@ -24,6 +24,7 @@
     @include respond-to('phone') {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, auto);
+      padding: 1em;
     }
   }
 
@@ -95,5 +96,6 @@
     font-size: 0.8em;
     letter-spacing: 1px;
     text-align: center;
+    padding: 1em 0;
   }
 }

@@ -37,6 +37,11 @@
   width: 100%;
   z-index: 2000;
 
+  @include respond-to('phone') {
+    position: absolute;
+    top: 0;
+  }
+
   // *** Branding
 
   &__brand {
@@ -51,6 +56,10 @@
 
   &__logo {
     width: 10em;
+
+    @include respond-to('phone') {
+      width: 6em;
+    }
   }
 
   &__company {

@@ -62,7 +62,7 @@
   padding: 2em;
 
   @include respond-to('phone') {
-    padding: 1em;
+    padding: 0.5em;
   }
 
   // *** Wrapper
