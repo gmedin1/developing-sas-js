@@ -6,13 +6,13 @@ html {
 *,
 *::after,
 *::before {
+  outline: 1px solid red;
   box-sizing: inherit;
   margin: 0;
   padding: 0; }
 
 body {
-  font-family: "Nunito", sans-serif;
-  overflow-x: hidden; }
+  font-family: "Nunito", sans-serif; }
 
 ul,
 ol {
@@ -21,6 +21,14 @@ ol {
 a {
   text-decoration: none; }
 
+/*
+* Author: German Medina
+* Company: Developing S.A.S
+* Description:
+* The 'header' tag being the parent node, controls the size
+* of its children based on the font-size rule initialy set on
+* 16px and shrinks on each breakpoint.
+*/
 .header {
   font-size: 16px; }
   @media (max-width: 980px) {
@@ -40,6 +48,21 @@ a {
   position: fixed;
   width: 100%;
   z-index: 2000; }
+  .nav__brand {
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    @media (max-width: 720px) {
+      .nav__brand {
+        flex-direction: column; } }
+  .nav__logo {
+    width: 10em; }
+  .nav__company {
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
   @media (max-width: 980px) {
     .nav__nav {
       align-items: center;
@@ -57,8 +80,6 @@ a {
       left: 0;
       width: 100%;
       z-index: 1; } }
-  .nav__logo {
-    width: 10em; }
   .nav__option {
     color: #ffffff;
     letter-spacing: 1px;
@@ -69,6 +90,8 @@ a {
       .nav__option {
         font-size: 1.1em;
         margin: 0; } }
+  .nav__nav > .nav__option:last-child {
+    margin-right: 2em; }
   .nav__burger {
     display: none; }
     .nav__burger.open .nav__bar:nth-child(1) {
@@ -536,11 +559,12 @@ a {
     .testimonials {
       font-size: 12px; } }
   .testimonials__title {
-    text-align: center;
+    color: #172d54;
     font-family: "Montserrat", sans-serif;
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: 800;
-    margin: 2em 0; }
+    padding: 1em 0;
+    text-align: center; }
   .testimonials__container {
     background: url(../img/developing-gradient-2.png) center/contain no-repeat;
     display: grid;
@@ -578,6 +602,7 @@ a {
   .testimony__brand {
     height: 100%; }
   .testimony__client {
+    color: #444444;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 2em; }
@@ -627,7 +652,7 @@ a {
       font-size: 14px; } }
   .services__title {
     font-family: "Montserrat", sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     margin-bottom: 1em; }
   .services__container {
@@ -742,15 +767,18 @@ a {
   font-size: 16px;
   padding: 4em 2em;
   margin: auto;
-  max-width: 1400px; }
+  max-width: 1400px;
+  width: 100%; }
   @media (max-width: 980px) {
     .processes {
       font-size: 14px; } }
   @media (max-width: 720px) {
     .processes {
-      font-size: 12px; } }
+      font-size: 12px;
+      padding: 0;
+      margin: 0; } }
   .processes__title {
-    color: #000000;
+    color: #172d54;
     font-family: "Montserrat", sans-serif;
     font-size: 2.5em;
     font-weight: 800;
@@ -763,6 +791,7 @@ a {
     grid-template-rows: repeat(2, 1fr); }
     @media (max-width: 720px) {
       .processes__wrapper {
+        gap: 0;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr); } }
   .processes .process:nth-child(4) {
@@ -774,6 +803,9 @@ a {
 .process {
   height: 32em;
   padding: 2em; }
+  @media (max-width: 720px) {
+    .process {
+      padding: 1em; } }
   .process__wrapper {
     align-items: center;
     border-radius: 1em;
@@ -781,9 +813,14 @@ a {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    padding: 2em; }
+    padding: 2em;
+    transition: all 0.6s ease; }
     .process__wrapper > * {
       margin: 1em; }
+    .process__wrapper:hover {
+      box-shadow: 15px 15px 30px -15px rgba(68, 68, 68, 0.75);
+      transform: translateY(-10px);
+      transition: all 0.6s ease; }
     @media (max-width: 720px) {
       .process__wrapper {
         padding: 0; } }
@@ -803,16 +840,16 @@ a {
   background: url(../img/prism-background-0.jpeg) center/cover no-repeat; }
 
 .prism-2 {
-  background: url(../img/prism-background-0.jpeg) center/cover no-repeat; }
+  background: url(../img/prism-background-1.jpeg) center/cover no-repeat; }
 
 .prism-3 {
-  background: url(../img/prism-background-0.jpeg) center/cover no-repeat; }
+  background: url(../img/prism-background-2.jpeg) center/cover no-repeat; }
 
 .prism-4 {
-  background: url(../img/prism-background-0.jpeg) center/cover no-repeat; }
+  background: url(../img/prism-background-3.jpeg) center/cover no-repeat; }
 
 .prism-5 {
-  background: url(../img/prism-background-0.jpeg) center/cover no-repeat; }
+  background: url(../img/prism-background-4.jpeg) center/cover no-repeat; }
 
 .footer {
   background: linear-gradient(90deg, #162b33 0%, #203942 50%, #264754 100%);
@@ -849,6 +886,7 @@ a {
     font-family: "Montserrat", sans-serif;
     font-size: 3em; }
   .footer__text {
+    margin-top: 2em;
     letter-spacing: 1px; }
   .footer__contact {
     font-family: "Montserrat", sans-serif;
@@ -883,10 +921,12 @@ a {
     .stack {
       font-size: 12px; } }
   .stack__title {
-    font-size: 2em;
+    color: #172d54;
     font-family: "Montserrat", sans-serif;
-    text-align: center;
-    padding: 1em 0; }
+    font-size: 2.5em;
+    font-weight: 800;
+    padding: 1em 0;
+    text-align: center; }
   .stack__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }

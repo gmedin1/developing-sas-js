@@ -17,11 +17,12 @@
   // Titulo
 
   &__title {
-    text-align: center;
+    color: $color-8;
     font-family: $font-2, sans-serif;
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: 800;
-    margin: 2em 0;
+    padding: 1em 0;
+    text-align: center;
   }
 
   // Contenedor
@@ -79,6 +80,7 @@
   // Cliente y Textos
 
   &__client {
+    color: $color-9;
     text-align: center;
     font-family: $font-2, sans-serif;
     font-size: 2em;

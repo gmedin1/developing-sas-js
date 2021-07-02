@@ -6,6 +6,7 @@
   padding: 4em 2em;
   margin: auto;
   max-width: $breakpoint-1;
+  width: 100%;
 
   @include respond-to('tablet') {
     font-size: $base-2;
@@ -13,12 +14,14 @@
 
   @include respond-to('phone') {
     font-size: $base-3;
+    padding: 0;
+    margin: 0;
   }
 
   // *** Titulo
 
   &__title {
-    color: $color-5;
+    color: $color-8;
     font-family: $font-2, sans-serif;
     font-size: 2.5em;
     font-weight: 800;
@@ -35,6 +38,7 @@
     grid-template-rows: repeat(2, 1fr);
 
     @include respond-to('phone') {
+      gap: 0;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(5, 1fr);
     }
@@ -57,6 +61,10 @@
   height: 32em;
   padding: 2em;
 
+  @include respond-to('phone') {
+    padding: 1em;
+  }
+
   // *** Wrapper
 
   &__wrapper {
@@ -67,9 +75,16 @@
     height: 100%;
     justify-content: space-between;
     padding: 2em;
+    transition: all 0.6s ease;
 
     & > * {
       margin: 1em;
+    }
+
+    &:hover {
+      box-shadow: 15px 15px 30px -15px rgba($color-9, 0.75);
+      transform: translateY(-10px);
+      transition: all 0.6s ease;
     }
 
     @include respond-to('phone') {
@@ -108,17 +123,17 @@
 }
 
 .prism-2 {
-  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
+  background: url(../img/prism-background-1.jpeg) center / cover no-repeat;
 }
 
 .prism-3 {
-  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
+  background: url(../img/prism-background-2.jpeg) center / cover no-repeat;
 }
 
 .prism-4 {
-  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
+  background: url(../img/prism-background-3.jpeg) center / cover no-repeat;
 }
 
 .prism-5 {
-  background: url(../img/prism-background-0.jpeg) center / cover no-repeat;
+  background: url(../img/prism-background-4.jpeg) center / cover no-repeat;
 }

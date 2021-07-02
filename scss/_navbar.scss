@@ -1,3 +1,12 @@
+/*
+* Author: German Medina
+* Company: Developing S.A.S
+* Description:
+* The 'header' tag being the parent node, controls the size
+* of its children based on the font-size rule initialy set on
+* 16px and shrinks on each breakpoint.
+*/
+
 // *** Cabecera
 
 .header {
@@ -28,6 +37,32 @@
   width: 100%;
   z-index: 2000;
 
+  // *** Branding
+
+  &__brand {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @include respond-to('phone') {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 10em;
+  }
+
+  &__company {
+    color: $color-4;
+    font-family: $font-2;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  // *** Opciones
+
   &__nav {
     @include respond-to('tablet') {
       align-items: center;
@@ -48,13 +83,6 @@
     }
   }
 
-  // *** Logo
-  &__logo {
-    width: 10em;
-  }
-
-  // *** Opciones
-
   &__option {
     color: $color-4;
     letter-spacing: 1px;
@@ -69,6 +97,10 @@
       font-size: 1.1em;
       margin: 0;
     }
+  }
+
+  &__nav > &__option:last-child {
+    margin-right: 2em;
   }
 
   // *** Burger
