@@ -3,6 +3,7 @@ var isOpen = 0;
 
 // Burger
 const burger = $.querySelector('.nav__burger');
+
 // Navegación
 const nav = $.querySelector('.nav__nav');
 

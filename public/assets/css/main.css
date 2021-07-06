@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *,
 *::after,
@@ -11,7 +12,8 @@ html {
   padding: 0; }
 
 body {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden; }
 
 ul,
 ol {
@@ -20,13 +22,32 @@ ol {
 a {
   text-decoration: none; }
 
+.button__up {
+  align-items: center;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  bottom: 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  height: 1.5em;
+  justify-content: center;
+  margin: 1em;
+  position: fixed;
+  text-align: center;
+  transform: rotateZ(180deg);
+  right: 0;
+  width: 1.5em;
+  z-index: 2000; }
+  .button__up > span {
+    text-align: center;
+    transform: translateY(-0.05em); }
+
 /*
-* Author: German Medina
+* Author: German Medina, Developing S.A.S Team
 * Company: Developing S.A.S
-* Description:
-* The 'header' tag being the parent node, controls the size
-* of its children based on the font-size rule initialy set on
-* 16px and shrinks on each breakpoint.
 */
 .header {
   font-size: 16px; }
@@ -45,6 +66,7 @@ a {
   justify-content: space-between;
   padding: 0 2em;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2000; }
   @media (max-width: 720px) {
@@ -59,33 +81,34 @@ a {
       .nav__brand {
         flex-direction: column; } }
   .nav__logo {
-    width: 10em; }
-    @media (max-width: 720px) {
-      .nav__logo {
-        width: 6em; } }
+    width: 6em; }
   .nav__company {
     color: #ffffff;
     font-family: "Montserrat";
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px; }
-  @media (max-width: 980px) {
-    .nav__nav {
-      align-items: center;
-      display: flex;
-      background-color: #000000;
-      flex-direction: column;
-      height: 100vh;
-      justify-content: space-around;
-      overflow: hidden;
-      padding: 2em 0;
-      position: absolute;
-      transition: all ease 0.6s;
-      transform: translateX(100%);
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1; } }
+    letter-spacing: 3px; }
+  .nav__nav {
+    margin-right: 2em; }
+    .nav__nav.open {
+      top: 0; }
+    @media (max-width: 980px) {
+      .nav__nav {
+        align-items: center;
+        display: flex;
+        background-color: #000000;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        margin-left: 0;
+        left: 0;
+        overflow: hidden;
+        padding: 2em 0;
+        position: absolute;
+        top: -100vh;
+        transition: top 1.2s ease;
+        width: 100%;
+        z-index: 1; } }
   .nav__option {
     color: #ffffff;
     letter-spacing: 1px;
@@ -94,10 +117,9 @@ a {
       text-decoration: underline; }
     @media (max-width: 980px) {
       .nav__option {
-        font-size: 1.1em;
-        margin: 0; } }
-  .nav__nav > .nav__option:last-child {
-    margin-right: 2em; }
+        font-size: 1.5em;
+        margin-left: 0;
+        text-transform: uppercase; } }
   .nav__burger {
     display: none; }
     .nav__burger.open .nav__bar:nth-child(1) {
@@ -115,11 +137,10 @@ a {
     background-color: #ffffff;
     height: 0.5rem;
     margin: 0.2rem 0;
-    transition: all ease 0.6s;
+    transition: transform 0.6s ease, opacity 0.6s ease;
     width: 2.5rem; }
 
 .slider {
-  margin: auto;
   height: 100vh;
   margin: auto; }
   .slider .slider__slide {
@@ -195,9 +216,6 @@ a {
 .show {
   transition: opacity 1.2s ease;
   opacity: 1 !important; }
-
-.open {
-  transform: translateX(0) !important; }
 
 .fill {
   background-color: #ffffff !important; }

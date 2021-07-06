@@ -1,10 +1,6 @@
 /*
-* Author: German Medina
+* Author: German Medina, Developing S.A.S Team
 * Company: Developing S.A.S
-* Description:
-* The 'header' tag being the parent node, controls the size
-* of its children based on the font-size rule initialy set on
-* 16px and shrinks on each breakpoint.
 */
 
 // *** Cabecera
@@ -34,6 +30,7 @@
   justify-content: space-between;
   padding: 0 2em;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2000;
 
@@ -55,11 +52,7 @@
   }
 
   &__logo {
-    width: 10em;
-
-    @include respond-to('phone') {
-      width: 6em;
-    }
+    width: 6em;
   }
 
   &__company {
@@ -67,26 +60,31 @@
     font-family: $font-2;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
   }
 
-  // *** Opciones
+  // *** Barra de Opciones
 
   &__nav {
+    margin-right: 2em;
+    &.open {
+      top: 0;
+    }
+
     @include respond-to('tablet') {
       align-items: center;
       display: flex;
       background-color: $color-5;
       flex-direction: column;
       height: 100vh;
-      justify-content: space-around;
+      justify-content: space-evenly;
+      margin-left: 0;
+      left: 0;
       overflow: hidden;
       padding: 2em 0;
       position: absolute;
-      transition: all ease 0.6s;
-      transform: translateX(100%);
-      top: 0;
-      left: 0;
+      top: -100vh;
+      transition: top 1.2s ease;
       width: 100%;
       z-index: 1;
     }
@@ -103,13 +101,10 @@
     }
 
     @include respond-to('tablet') {
-      font-size: 1.1em;
-      margin: 0;
+      font-size: 1.5em;
+      margin-left: 0;
+      text-transform: uppercase;
     }
-  }
-
-  &__nav > &__option:last-child {
-    margin-right: 2em;
   }
 
   // *** Burger
@@ -117,7 +112,7 @@
   &__burger {
     display: none;
 
-    // *** Al Agregar '.open' con JavaScript
+    // *** Al Agregar '.Open' con JavaScript.
 
     &.open .nav__bar:nth-child(1) {
       transform: translateY(11px) rotateZ(45deg);
@@ -144,7 +139,7 @@
     background-color: $color-4;
     height: 0.5rem;
     margin: 0.2rem 0;
-    transition: all ease 0.6s;
+    transition: transform 0.6s ease, opacity 0.6s ease;
     width: 2.5rem;
   }
 }
@@ -152,7 +147,6 @@
 // *** Componente: Presentacion
 
 .slider {
-  margin: auto;
   height: 100vh;
   margin: auto;
 
@@ -258,10 +252,6 @@
 .show {
   transition: opacity 1.2s ease;
   opacity: 1 !important;
-}
-
-.open {
-  transform: translateX(0) !important;
 }
 
 .fill {

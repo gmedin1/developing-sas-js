@@ -1,0 +1,25 @@
+.button__up {
+  align-items: center;
+  border: 5px solid $color-4;
+  border-radius: 50%;
+  bottom: 0;
+  color: $color-4;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  height: 1.5em;
+  justify-content: center;
+  margin: 1em;
+  position: fixed;
+  text-align: center;
+  transform: rotateZ(180deg);
+  right: 0;
+  width: 1.5em;
+  z-index: 2000;
+
+  & > span {
+    text-align: center;
+    transform: translateY(-0.05em);
+  }
+}

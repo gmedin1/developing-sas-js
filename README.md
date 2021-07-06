@@ -1,27 +1,18 @@
-# Problemas a Resolver.
+# Developing S.A.S Website
 
-() La propiedad 'top' del texto de la landing no esta bien definido, el alto del dispositivo afecta su versión responsive.
+## Introduction
 
-() Ajustar los altos de las secciones, fijos? o variables según el contenido de la caja?
+This project consist of the creation of the website for Developing S.A.S.
 
-() Ajustar las margenes y los breakpoints de la página.
+## Technologies
 
-Utilizar los de Bootstrap estaría !OK!
+For this particular project we used:
 
-() Acomodar la margen general de la página y los elementos a esa margen.
+- HTML for General Markdown
+- Proprocessing CSS with SASS
+- JavaScript
+  - Intersection Observer (Lazy Loading, On Scroll Animations)
+  - Particles.js (Cool Effects)
+- Webpack
 
-() Añadir los elementos construidos como componentes.
-
-() Precargar las imagenes del carrousel.
-
-() Estandarizar los paddings de cada sección para que sea equitativo entre secciones.
-
-# Por Añadir
-
-() Cuando el usuario haga scroll en la pagina la navegación debe tener una animación.
-
-() Fuentes unificadas para los parrafos y titulos.
-
-# Falencias
-
-- Las imagenes no se entregan en distintos tamaños, ni normalizadas.
+## Log

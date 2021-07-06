@@ -54,12 +54,12 @@ $breakpoints: (
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *::after,
 *::before {
-  // outline: 1px solid red;
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -67,7 +67,7 @@ html {
 
 body {
   font-family: $font-1, sans-serif;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 ul,
@@ -98,6 +98,7 @@ a {
 
 // *** Modulos
 
+@import 'button';
 @import 'navbar';
 @import 'about';
 @import 'info';
