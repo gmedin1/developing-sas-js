@@ -1,8 +1,17 @@
-const section = document.querySelector('.slider');
 const options = {};
 
-const observer = new IntersectionObserver((entries, observer) => {
+const callback = (entries, observer) => {
+  const nav = document.querySelector('.nav');
   entries.forEach((entry) => {
-    console.log(entry);
+    // if (!entry.isIntersecting) {
+    //   nav.style.backgroundColor = '#e0e0e0';
+    // } else {
+    //   nav.style.backgroundColor = 'transparent';
+    // }
   });
-}, options);
+};
+
+const observer = new IntersectionObserver(callback, options);
+const target = document.getElementById('header');
+
+observer.observe(target);

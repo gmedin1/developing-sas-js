@@ -81,11 +81,11 @@ a {
       .nav__brand {
         flex-direction: column; } }
   .nav__logo {
-    width: 6em; }
+    width: 5em; }
   .nav__company {
     color: #ffffff;
-    font-family: "Montserrat";
-    font-weight: 800;
+    font-family: "Nunito";
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px; }
   .nav__nav {
