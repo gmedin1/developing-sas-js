@@ -1,0 +1,213 @@
+.cards {
+  font-size: 16px;
+  padding: 2em;
+
+  @include respond-to('tablet') {
+    font-size: 14px;
+  }
+
+  @include respond-to('tablet') {
+    font-size: 12px;
+  }
+
+  &__title {
+    font: 800 2em $font-2, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    letter-spacing: 1px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    padding: 0 4em;
+
+    @include respond-to('phone') {
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+    }
+  }
+
+  // Hover 1er Card
+
+  &__wrapper .card:nth-child(1) {
+    background-color: $color-1;
+  }
+
+  &__wrapper .card:nth-child(1):hover .card__figure.oval {
+    opacity: 0.8;
+    width: 70%;
+  }
+
+  &__wrapper .card:nth-child(1):hover {
+    box-shadow: 3px 3px 5px 0px rgba($color-6, 0.5);
+    transform: translateY(-0.5em);
+  }
+
+  // Hover 2do Card
+
+  &__wrapper .card:nth-child(2) {
+    background-color: $color-2;
+    align-self: flex-end;
+
+    @include respond-to('phone') {
+      align-self: center;
+    }
+  }
+
+  &__wrapper .card:nth-child(2):hover .card__figure.square {
+    background-color: $color-14;
+  }
+
+  &__wrapper .card:nth-child(2):hover {
+    box-shadow: 3px 3px 5px 0px rgba($color-6, 0.5);
+    transform: translateY(-0.5em);
+  }
+
+  // Hover 3er Card
+
+  &__wrapper .card:nth-child(3) {
+    background-color: $color-3;
+  }
+
+  &__wrapper .card:nth-child(3):hover .card__figure.circles {
+    border-radius: 3em;
+    height: 100%;
+  }
+
+  &__wrapper .card:nth-child(3):hover {
+    box-shadow: 3px 3px 5px 0px rgba($color-6, 0.5);
+    transform: translateY(-0.5em);
+  }
+
+  // Hover 4to Card
+
+  &__wrapper .card:nth-child(4) {
+    background-color: $color-7;
+    align-self: flex-end;
+
+    @include respond-to('phone') {
+      align-self: center;
+    }
+  }
+
+  &__wrapper .card:nth-child(4):hover .card__figure.squares {
+    background-color: $color-17;
+  }
+
+  &__wrapper .card:nth-child(4):hover {
+    box-shadow: 3px 3px 5px 0px rgba($color-6, 0.5);
+    transform: translateY(-0.5em);
+  }
+}
+
+.card {
+  border-radius: 1em;
+  color: $color-4;
+  height: 20em;
+  margin: 2em 0;
+  padding: 2em 3em;
+  transition: all ease 0.6s;
+  width: 50%;
+
+  @include respond-to('phone') {
+    width: 80%;
+  }
+
+  &__title {
+    font: 800 2em $font-1;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 0.5em;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+  }
+
+  &__figure {
+    transition: all ease 0.6s;
+  }
+
+  &__figure.circle,
+  &__figure.oval {
+    background-color: $color-13;
+  }
+
+  &__figure.square {
+    background-color: $color-14;
+  }
+
+  &__cols {
+    display: flex;
+    height: 10em;
+    justify-content: space-between;
+  }
+
+  &__col {
+    background-color: $color-15;
+    display: flex;
+    border-radius: 3em;
+  }
+}
+
+.col-2 .circles,
+.col-4 .circles {
+  align-self: flex-end;
+}
+
+.circles {
+  background-color: $color-16;
+}
+
+.circle,
+.circles {
+  border-radius: 50%;
+  height: 4.5em;
+  width: 4.5em;
+}
+
+.oval {
+  border-radius: 3em;
+  height: 4.5em;
+  width: 50%;
+}
+
+.square {
+  height: 4.5em;
+  width: calc(95% / 5);
+}
+
+.squares {
+  background-color: $color-17;
+  height: 2.8em;
+  width: calc(95% / 6);
+}
+
+.line-1 .square:nth-child(4) {
+  background-color: $color-2;
+}
+
+.line-2 .square:nth-child(2) {
+  background-color: $color-2;
+}
+
+.line-3 .squares:nth-child(4),
+.line-3 .squares:nth-child(6),
+.line-4 .squares:nth-child(2),
+.line-4 .squares:nth-child(3),
+.line-5 .squares:nth-child(2),
+.line-5 .squares:nth-child(3),
+.line-5 .squares:nth-child(4),
+.line-5 .squares:nth-child(6) {
+  background-color: $color-7;
+}

@@ -239,7 +239,7 @@ a {
       .ribbon__text {
         font-size: 2.5em; } }
   .ribbon > .underline {
-    background-color: #a62e00;
+    background-color: #dd5724;
     margin: auto;
     height: 3px;
     width: 30em; }
@@ -521,7 +521,7 @@ a {
   background-color: #1e4b65; }
 
 .bar-4 {
-  background-color: #a62e00; }
+  background-color: #dd5724; }
 
 .projects {
   font-size: 16px;
@@ -1001,3 +1001,144 @@ a {
 .icon-8,
 .icon-9 {
   border: 3px solid #1e4b65; }
+
+.cards {
+  font-size: 16px;
+  padding: 2em; }
+  @media (max-width: 980px) {
+    .cards {
+      font-size: 14px; } }
+  @media (max-width: 980px) {
+    .cards {
+      font-size: 12px; } }
+  .cards__title {
+    font: 800 2em "Montserrat", sans-serif;
+    text-align: center;
+    letter-spacing: 1px; }
+  .cards__text {
+    letter-spacing: 1px; }
+  .cards__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    padding: 0 4em; }
+    @media (max-width: 720px) {
+      .cards__wrapper {
+        align-items: center;
+        justify-content: center;
+        padding: 1em; } }
+  .cards__wrapper .card:nth-child(1) {
+    background-color: #2b9c88; }
+  .cards__wrapper .card:nth-child(1):hover .card__figure.oval {
+    opacity: 0.8;
+    width: 70%; }
+  .cards__wrapper .card:nth-child(1):hover {
+    box-shadow: 3px 3px 5px 0px rgba(12, 14, 16, 0.5);
+    transform: translateY(-0.5em); }
+  .cards__wrapper .card:nth-child(2) {
+    background-color: #172d54;
+    align-self: flex-end; }
+    @media (max-width: 720px) {
+      .cards__wrapper .card:nth-child(2) {
+        align-self: center; } }
+  .cards__wrapper .card:nth-child(2):hover .card__figure.square {
+    background-color: #64799d; }
+  .cards__wrapper .card:nth-child(2):hover {
+    box-shadow: 3px 3px 5px 0px rgba(12, 14, 16, 0.5);
+    transform: translateY(-0.5em); }
+  .cards__wrapper .card:nth-child(3) {
+    background-color: #1e4b65; }
+  .cards__wrapper .card:nth-child(3):hover .card__figure.circles {
+    border-radius: 3em;
+    height: 100%; }
+  .cards__wrapper .card:nth-child(3):hover {
+    box-shadow: 3px 3px 5px 0px rgba(12, 14, 16, 0.5);
+    transform: translateY(-0.5em); }
+  .cards__wrapper .card:nth-child(4) {
+    background-color: #dd5724;
+    align-self: flex-end; }
+    @media (max-width: 720px) {
+      .cards__wrapper .card:nth-child(4) {
+        align-self: center; } }
+  .cards__wrapper .card:nth-child(4):hover .card__figure.squares {
+    background-color: #a2481f; }
+  .cards__wrapper .card:nth-child(4):hover {
+    box-shadow: 3px 3px 5px 0px rgba(12, 14, 16, 0.5);
+    transform: translateY(-0.5em); }
+
+.card {
+  border-radius: 1em;
+  color: #ffffff;
+  height: 20em;
+  margin: 2em 0;
+  padding: 2em 3em;
+  transition: all ease 0.6s;
+  width: 50%; }
+  @media (max-width: 720px) {
+    .card {
+      width: 80%; } }
+  .card__title {
+    font: 800 2em "Nunito"; }
+  .card__title, .card__text {
+    margin-bottom: 0.5em; }
+  .card__line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em; }
+  .card__figure {
+    transition: all ease 0.6s; }
+  .card__figure.circle, .card__figure.oval {
+    background-color: #6fcdbc; }
+  .card__figure.square {
+    background-color: #64799d; }
+  .card__cols {
+    display: flex;
+    height: 10em;
+    justify-content: space-between; }
+  .card__col {
+    background-color: #3d7ca0;
+    display: flex;
+    border-radius: 3em; }
+
+.col-2 .circles,
+.col-4 .circles {
+  align-self: flex-end; }
+
+.circles {
+  background-color: #12688d; }
+
+.circle,
+.circles {
+  border-radius: 50%;
+  height: 4.5em;
+  width: 4.5em; }
+
+.oval {
+  border-radius: 3em;
+  height: 4.5em;
+  width: 50%; }
+
+.square {
+  height: 4.5em;
+  width: calc(95% / 5); }
+
+.squares {
+  background-color: #a2481f;
+  height: 2.8em;
+  width: calc(95% / 6); }
+
+.line-1 .square:nth-child(4) {
+  background-color: #172d54; }
+
+.line-2 .square:nth-child(2) {
+  background-color: #172d54; }
+
+.line-3 .squares:nth-child(4),
+.line-3 .squares:nth-child(6),
+.line-4 .squares:nth-child(2),
+.line-4 .squares:nth-child(3),
+.line-5 .squares:nth-child(2),
+.line-5 .squares:nth-child(3),
+.line-5 .squares:nth-child(4),
+.line-5 .squares:nth-child(6) {
+  background-color: #dd5724; }

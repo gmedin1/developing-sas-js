@@ -19,12 +19,17 @@ $color-3: #1e4b65;
 $color-4: #ffffff;
 $color-5: #000000;
 $color-6: #0c0e10;
-$color-7: #a62e00;
+$color-7: #dd5724;
 $color-8: #172d54;
 $color-9: #444444;
 $color-10: #e0e0e0;
 $color-11: #162b33 0%, #203942 50%, #264754 100%;
 $color-12: #ebebeb;
+$color-13: #6fcdbc;
+$color-14: #64799d;
+$color-15: #3d7ca0;
+$color-16: #12688d;
+$color-17: #a2481f;
 
 // *** Bases
 
@@ -63,6 +68,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  // border: 1px solid red;
 }
 
 body {
@@ -112,3 +118,4 @@ a {
 @import 'process';
 @import 'footer';
 @import 'stack';
+@import 'cards';
