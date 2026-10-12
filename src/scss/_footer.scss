@@ -1,14 +1,16 @@
-.footer {
-  background: linear-gradient(90deg, $color-11);
-  color: $color-4;
-  font-size: $base-1;
+@use "resets" as v;
 
-  @include respond-to('tablet') {
-    font-size: $base-3;
+.footer {
+  background: linear-gradient(90deg, v.$color-11);
+  color: v.$color-4;
+  font-size: v.$base-1;
+
+  @include v.respond-to("tablet") {
+    font-size: v.$base-3;
   }
 
-  @include respond-to('phone') {
-    font-size: $base-3;
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
   }
 
   // *** Contenedor
@@ -19,9 +21,9 @@
     grid-template-rows: repeat(2, 1fr);
     padding: 4em 2em;
     margin: auto;
-    max-width: $breakpoint-1;
+    max-width: v.$breakpoint-1;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, auto);
       padding: 1em;
@@ -45,7 +47,7 @@
   }
 
   &__map {
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       width: 100%;
     }
   }
@@ -53,7 +55,7 @@
   // *** Seccion Top Right
 
   &__title {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 3em;
   }
 
@@ -65,7 +67,7 @@
   // *** Seccion Bot Left
 
   &__contact {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 1.5em;
     font-weight: 800;
   }
@@ -78,7 +80,7 @@
   // *** Seccion Bot Right
 
   &__visit {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 1.5em;
     font-weight: 800;
   }

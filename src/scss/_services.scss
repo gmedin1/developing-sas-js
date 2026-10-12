@@ -1,27 +1,29 @@
 /*** Servicios */
 
+@use "resets" as v;
+
 .services {
-  color: $color-8;
-  font-size: $base-1;
+  color: v.$color-8;
+  font-size: v.$base-1;
   margin: 4em 0;
 
-  @include respond-to('tablet') {
-    font-size: $base-2;
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
   }
 
-  @include respond-to('phone') {
-    font-size: $base-2;
+  @include v.respond-to("phone") {
+    font-size: v.$base-2;
   }
 
   &__title {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 1em;
   }
 
   &__container {
-    background: url(../img/services-background.jpeg) center / cover no-repeat;
+    background: url(../public/assets/img/services-background.jpeg) center / cover no-repeat;
   }
 }
 
@@ -30,7 +32,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: $breakpoint-1;
+  max-width: v.$breakpoint-1;
   padding: 2em;
   width: 100%;
 }
@@ -67,7 +69,7 @@
 // Titulo del Servicio
 
 .bubble__title {
-  font-family: $font-2, sans-serif;
+  font-family: v.$font-2, sans-serif;
   font-size: 1.5em;
   font-weight: 800;
   text-align: center;
@@ -77,7 +79,7 @@
 .services .bubble:nth-child(3) {
   align-self: flex-end;
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     align-self: center;
   }
 }
@@ -88,7 +90,7 @@
   opacity: 100;
   transform: translateX(100%);
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     transform: translateY(200%);
   }
 }
@@ -121,7 +123,7 @@
   position: absolute;
   right: 0;
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     display: flex;
     bottom: 0;
     right: 50%;
@@ -138,7 +140,7 @@
   width: 100%;
   z-index: -1;
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     padding: 0 0.5em;
   }
 }
@@ -146,7 +148,7 @@
 .service__list .service__item:nth-child(2) {
   margin-left: 1em;
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     margin-left: 0;
   }
 }

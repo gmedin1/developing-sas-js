@@ -1,9 +1,11 @@
+@use "resets" as v;
+
 .button__up {
   align-items: center;
-  border: 5px solid $color-4;
+  border: 5px solid v.$color-4;
   border-radius: 50%;
   bottom: 0;
-  color: $color-4;
+  color: v.$color-4;
   cursor: pointer;
   display: flex;
   font-size: 2rem;

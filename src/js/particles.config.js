@@ -1,4 +1,6 @@
-particlesJS('particles-js', {
+import "./particles";
+
+particlesJS("particles-js", {
   particles: {
     number: {
       value: 40,
@@ -8,19 +10,19 @@ particlesJS('particles-js', {
       },
     },
     color: {
-      value: '#ffffff',
+      value: "#ffffff",
     },
     shape: {
-      type: 'triangle',
+      type: "triangle",
       stroke: {
         width: 0,
-        color: '#ffffff',
+        color: "#ffffff",
       },
       polygon: {
         nb_sides: 5,
       },
       image: {
-        src: 'img/github.svg',
+        src: "img/github.svg",
         width: 100,
         height: 100,
       },
@@ -48,17 +50,17 @@ particlesJS('particles-js', {
     line_linked: {
       enable: true,
       distance: 300,
-      color: '#ffffff',
+      color: "#ffffff",
       opacity: 0.4,
       width: 2,
     },
     move: {
       enable: true,
       speed: 12,
-      direction: 'none',
+      direction: "none",
       random: false,
       straight: false,
-      out_mode: 'out',
+      out_mode: "out",
       bounce: false,
       attract: {
         enable: false,
@@ -68,15 +70,15 @@ particlesJS('particles-js', {
     },
   },
   interactivity: {
-    detect_on: 'canvas',
+    detect_on: "canvas",
     events: {
       onhover: {
         enable: false,
-        mode: 'repulse',
+        mode: "repulse",
       },
       onclick: {
         enable: true,
-        mode: 'push',
+        mode: "push",
       },
       resize: true,
     },

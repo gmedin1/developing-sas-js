@@ -1,37 +1,39 @@
 // *** Referencia a Start Ups
 
+@use "resets" as v;
+
 .reference {
   align-items: center;
-  background-color: $color-5;
+  background-color: v.$color-5;
   display: flex;
   flex-direction: column;
-  font-size: $base-1;
+  font-size: v.$base-1;
   justify-content: center;
   padding: 4em 2em;
 
-  @include respond-to('tablet') {
-    font-size: $base-2;
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
   }
 
-  @include respond-to('phone') {
-    font-size: $base-3;
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
   }
 
   // *** Tarjeta
 
   &__card {
     align-items: center;
-    background-color: $color-4;
+    background-color: v.$color-4;
     border-radius: 2em;
-    color: $color-8;
+    color: v.$color-8;
     display: flex;
     justify-content: space-between;
     height: 30em;
     padding: 4em;
-    max-width: $breakpoint-1;
+    max-width: v.$breakpoint-1;
     width: 100%;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       flex-direction: column;
       padding: 1.1em;
       height: fit-content;
@@ -46,7 +48,7 @@
     margin: 0 2em;
     width: 50%;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       width: 100%;
 
       & > * {
@@ -62,7 +64,7 @@
   }
 
   &__right {
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       display: none;
     }
   }
@@ -70,28 +72,28 @@
   // *** Textos
 
   &__title {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 2.5em;
     font-weight: 800;
   }
 
   &__reference {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 2em;
     font-weight: 800;
     margin-top: 2em;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       margin-top: 1em;
     }
   }
 
   &__text {
-    color: $color-9;
+    color: v.$color-9;
     letter-spacing: 1px;
     margin: 2em 0;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       margin-bottom: 0;
     }
   }
@@ -110,14 +112,14 @@
 .info {
   align-items: center;
   display: flex;
-  color: $color-4;
+  color: v.$color-4;
   justify-content: center;
   padding: 2em;
   margin-top: 4em;
-  max-width: $breakpoint-1;
+  max-width: v.$breakpoint-1;
   width: 100%;
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     flex-direction: column;
   }
 
@@ -127,7 +129,7 @@
     margin: 2em;
     width: 50%;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       margin: 2em 0;
       width: 100%;
     }
@@ -136,7 +138,7 @@
   // Derecha
 
   &__title {
-    font-family: $font-2, sans-serif;
+    font-family: v.$font-2, sans-serif;
     font-size: 4em;
     font-weight: 800;
     text-align: center;
@@ -145,7 +147,7 @@
   // Izquierda
 
   &__text {
-    color: $color-10;
+    color: v.$color-10;
     letter-spacing: 1px;
     text-align: center;
   }

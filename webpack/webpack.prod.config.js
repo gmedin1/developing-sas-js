@@ -29,7 +29,7 @@ module.exports = merge(shared, {
       }),
     ],
   },
-  moduel: {
+  module: {
     rules: [
       {
         test: /\.scss$/,

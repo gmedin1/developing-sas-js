@@ -1,10 +1,12 @@
 // *** Hecho
 
+@use "resets" as v;
+
 .facts {
-  background-color: $color-5;
-  color: $color-4;
+  background-color: v.$color-5;
+  color: v.$color-4;
   display: grid;
-  font-size: $base-1;
+  font-size: v.$base-1;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2em;
@@ -13,12 +15,12 @@
   place-content: center;
   margin: auto;
 
-  @include respond-to('tablet') {
-    font-size: $base-2;
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
   }
 
-  @include respond-to('phone') {
-    font-size: $base-2;
+  @include v.respond-to("phone") {
+    font-size: v.$base-2;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -29,7 +31,7 @@
     display: flex;
     padding: 0 4em;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       padding: 0;
     }
 
@@ -51,14 +53,14 @@
     // *** Contenido
 
     &__number {
-      font-family: $font-2, sans-serif;
+      font-family: v.$font-2, sans-serif;
       font-size: 4em;
       font-weight: 800;
       margin-top: 0.5em;
     }
 
     &__text {
-      color: $color-10;
+      color: v.$color-10;
       letter-spacing: 1px;
     }
   }
@@ -67,14 +69,14 @@
 // Control de Colores
 
 .bar-1 {
-  background-color: $color-1;
+  background-color: v.$color-1;
 }
 .bar-2 {
-  background-color: $color-2;
+  background-color: v.$color-2;
 }
 .bar-3 {
-  background-color: $color-3;
+  background-color: v.$color-3;
 }
 .bar-4 {
-  background-color: $color-7;
+  background-color: v.$color-7;
 }

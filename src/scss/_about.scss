@@ -1,11 +1,13 @@
 // *** Cinta.
 
+@use "resets" as v;
+
 .ribbon {
   padding: 2em;
   position: relative;
   z-index: 1000;
 
-  @include respond-to('phone') {
+  @include v.respond-to("phone") {
     padding: 2em 0;
   }
 
@@ -17,11 +19,11 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include respond-to('tablet') {
+    @include v.respond-to("tablet") {
       font-size: 4em;
     }
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       font-size: 2.5em;
     }
   }
@@ -29,36 +31,36 @@
   // *** Delineado
 
   & > .underline {
-    background-color: $color-7;
+    background-color: v.$color-7;
     margin: auto;
     height: 3px;
     width: 30em;
 
-    @include respond-to('tablet') {
+    @include v.respond-to("tablet") {
       width: 25em;
     }
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       width: 20em;
     }
   }
 }
 
 .about {
-  background-color: $color-5;
-  color: $color-4;
-  font-family: $font-2, sans-serif;
-  font-size: $base-1;
+  background-color: v.$color-5;
+  color: v.$color-4;
+  font-family: v.$font-2, sans-serif;
+  font-size: v.$base-1;
   font-weight: 800;
   padding: 4em 0;
   position: relative;
 
-  @include respond-to('tablet') {
-    font-size: $base-2;
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
   }
 
-  @include respond-to('phone') {
-    font-size: $base-3;
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
   }
 
   // *** Data
@@ -70,19 +72,19 @@
     padding: 0 2em;
     position: relative;
     margin: 10em auto 6em auto;
-    max-width: $breakpoint-1;
+    max-width: v.$breakpoint-1;
     z-index: 1000;
   }
 
   // *** Tarjetas
 
   &__card {
-    background-color: $color-6;
+    background-color: v.$color-6;
     columns: 3;
     gap: 2em;
     padding: 4em;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       columns: 1;
     }
   }
@@ -92,7 +94,7 @@
   &__col {
     break-inside: avoid;
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       margin: 2em 0;
     }
   }

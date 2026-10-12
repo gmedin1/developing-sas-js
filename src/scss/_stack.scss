@@ -1,22 +1,24 @@
+@use "resets" as v;
+
 .stack {
-  font-size: $base-1;
+  font-size: v.$base-1;
   padding: 4em 2em;
   margin: auto;
-  max-width: $breakpoint-1;
+  max-width: v.$breakpoint-1;
 
-  @include respond-to('tablet') {
-    font-size: $base-2;
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
   }
 
-  @include respond-to('phone') {
-    font-size: $base-3;
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
   }
 
   // *** Titulo
 
   &__title {
-    color: $color-8;
-    font-family: $font-2, sans-serif;
+    color: v.$color-8;
+    font-family: v.$font-2, sans-serif;
     font-size: 2.5em;
     font-weight: 800;
     padding: 1em 0;
@@ -29,11 +31,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    @include respond-to('tablet') {
+    @include v.respond-to("tablet") {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include respond-to('phone') {
+    @include v.respond-to("phone") {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -68,17 +70,17 @@
 .icon-1,
 .icon-2,
 .icon-3 {
-  border: 3px solid $color-1;
+  border: 3px solid v.$color-1;
 }
 
 .icon-4,
 .icon-5,
 .icon-6 {
-  border: 3px solid $color-2;
+  border: 3px solid v.$color-2;
 }
 
 .icon-7,
 .icon-8,
 .icon-9 {
-  border: 3px solid $color-3;
+  border: 3px solid v.$color-3;
 }
