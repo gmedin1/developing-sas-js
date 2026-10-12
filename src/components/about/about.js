@@ -1,4 +1,4 @@
-import "./particles";
+import "../../vendor/particles";
 
 particlesJS("particles-js", {
   particles: {

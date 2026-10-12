@@ -1,0 +1,19 @@
+<!-- Servicios -->
+<section id="services" class="services">
+  <h2 class="services__title">{{title}}</h2>
+  <div class="services__container">
+    <div class="bubbles">
+      {{#each services}}
+        <article class="bubble">
+          <img class="bubble__icon" src="{{img icon}}" alt="" />
+          <h3 class="bubble__title">{{title}}</h3>
+          <div class="service__list">
+            {{#each items}}
+              <div class="service__item">{{this}}</div>
+            {{/each}}
+          </div>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>

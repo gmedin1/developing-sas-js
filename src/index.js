@@ -1,11 +1,8 @@
 import "./main.scss";
 
-import "./js/burger";
-import "./js/carousel";
-import "./js/counter";
-import "./js/data";
-import "./js/observer";
-import "./js/particles.config";
-import "./js/projects";
-
-console.log("Hi!");
+// Comportamiento de cada componente
+import "./components/header/burger";
+import "./components/header/carousel";
+import "./components/header/observer";
+import "./components/about/about";
+import "./components/facts/facts";

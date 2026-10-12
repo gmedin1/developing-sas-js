@@ -50,6 +50,9 @@ module.exports = merge(shared, {
       paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
         nodir: true,
       }),
+      // Clases que las plantillas generan con {{inc @index}} (p. ej. prism-1)
+      // y que PurgeCSS no puede encontrar como texto literal.
+      safelist: [/^(n|member|fact|bar|prism|icon)-\d+$/],
     }),
   ],
 });

@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
+const src = path.resolve(__dirname, "..", "src");
+
 const config = {
   entry: "./src/index.js",
   output: {
@@ -10,26 +12,33 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
         type: "asset/resource",
         generator: {
           filename: "img/[name].[contenthash:12][ext]",
         },
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
+        test: /\.hbs$/,
+        loader: "handlebars-loader",
+        options: {
+          // {{img "x.png"}} y {{data "componente"}} viven en src/helpers
+          helperDirs: [path.join(src, "helpers")],
+          // {{> services}} -> src/components/services/services.hbs
+          partialResolver(partial, callback) {
+            callback(
+              null,
+              path.join(src, "components", partial, `${partial}.hbs`)
+            );
           },
-        ],
+        },
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.resolve(__dirname, "..", "index.html"),
+      template: path.join(src, "index.hbs"),
     }),
   ],
 };

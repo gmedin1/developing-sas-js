@@ -1,0 +1,20 @@
+<!-- Testimonios -->
+<section id="testimonials" class="testimonials">
+  <h2 class="testimonials__title">{{title}}</h2>
+  <div class="testimonials__container">
+    {{#each testimonials}}
+      <article class="testimony">
+        <div class="testimony__container">
+          <img class="testimony__brand" src="{{img logo}}" alt="" />
+        </div>
+        <h3 class="testimony__client">{{client}}</h3>
+        <div class="testimony__skills">
+          {{#each skills}}
+            <p class="testimony__skill">{{this}}</p>
+            <div class="satisfaction"></div>
+          {{/each}}
+        </div>
+      </article>
+    {{/each}}
+  </div>
+</section>

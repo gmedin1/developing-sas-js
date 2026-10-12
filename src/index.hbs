@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+      href="{{img "graphic.ico"}}"
+    />
+    <meta name="author" content="Developing S.A.S Team" />
+    <meta
+      name="description"
+      content="Somos una empresa que busca llevar otros negocios y empresas a la era de la transformación digital,
+    apoyándolos en distintos puntos como los son Diseño, Tecnología, Desarrollo a la medida,
+    programación, Marketing, Soluciones y Proyectos Especiales. Nos involucramos en los objetivos de
+    nuestros clientes, trayendo para ellos innovación en diseño, amigabilidad y experiencia de usuario, para
+    este nuevo mundo digital."
+    />
+    <meta
+      name="keywords"
+      content="Diseño, desarrollo web, soluciones tecnologicas, commerce, Branding, diseño grafico, paginas web, marketing digital, proyectos tecnologicos, programacion, Programador, e commerce,ecommerce,creador de logos, pagina web,Logotipos,comercio electronico,lenguajes de programacion,diseño web,agencia de marketing digital,marketing online,páginas,diseño de paginas web,pagina web gratis,sitios web,diseño digital,diseño de logos,illustrator online,precio desarrollo pagina web,desarrollo de paginas web precio,programador web full stack,creacion pagina web precio,diseño web precios,diseño y creacion de paginas web,especialidad en marketing digital,publicidad digital precios,agencia digital 360,paginas web de desarrollo de software,mejores agencias de diseño web,crm para ecommerce,precio de una pagina web,diseño grafico a distancia,empresas desarrolladoras de paginas web,diseño web full stack,costo pagina web,diseño tienda online,agencia marketing y publicidad,agencia de paginas web,necesito una página web para mi empresa,precio ecommerce,ecommerce precio,programación web full stack,mkt digital,Diseñadores,Diseñadora,disena,creador logos,i commerce,pag web,la página web,crea un logo,Logo,crea logos,un logotipo,Disenar,crea pagina web,la pagina web,una pagina web,es una página web,web pagina"
+    />
+    <title>Developing S.A.S | Desarrollo de Software</title>
+    <script
+      src="https://kit.fontawesome.com/c176eff3a8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body">
+    <a href="#body" class="button button__up">
+      <span>v</span>
+    </a>
+    {{> header (data "header")}}
+    <main>
+      {{> about (data "about")}}
+      {{> cards (data "cards")}}
+      {{> reference (data "reference")}}
+      {{> team (data "team")}}
+      {{> facts (data "facts")}}
+      {{> projects (data "projects")}}
+      {{> testimonials (data "testimonials")}}
+      {{> services (data "services")}}
+      {{> processes (data "processes")}}
+      {{> stack (data "stack")}}
+    </main>
+    {{> footer (data "footer")}}
+  </body>
+</html>

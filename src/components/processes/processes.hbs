@@ -1,0 +1,15 @@
+<!-- Metodologias -->
+<section id="processes" class="processes">
+  <h2 class="processes__title">{{title}}</h2>
+  <div class="processes__wrapper">
+    {{#each processes}}
+      <article class="process">
+        <div class="process__wrapper prism-{{inc @index}}">
+          <img src="{{img ../icon}}" alt="" class="process__logo" />
+          <h3 class="process__title">{{title}}</h3>
+          <p class="process__description">{{description}}</p>
+        </div>
+      </article>
+    {{/each}}
+  </div>
+</section>

@@ -5,7 +5,7 @@
 
 // *** Cabecera
 
-@use "resets" as v;
+@use "../../scss/resets" as v;
 
 .header {
   font-size: v.$base-1;

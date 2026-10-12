@@ -1,0 +1,49 @@
+{
+  "title": "Servicios",
+  "cards": [
+    {
+      "title": "Diseño",
+      "text": "Branding - UX UI - Web",
+      "design": {
+        "rows": [
+          { "class": "card__line", "figures": ["oval", "circle", "circle"] },
+          { "class": "card__line", "figures": ["circle", "circle", "oval"] }
+        ]
+      }
+    },
+    {
+      "title": "Desarrollo",
+      "text": "Web - Móvil - eCommerce",
+      "design": {
+        "rows": [
+          { "class": "card__line line-1", "figures": ["square", "square", "square", "square", "square"] },
+          { "class": "card__line line-2", "figures": ["square", "square", "square", "square", "square"] }
+        ]
+      }
+    },
+    {
+      "title": "Marketing",
+      "text": "Redes Sociales - SEO / SEM - Campañas",
+      "design": {
+        "class": "card__cols",
+        "rows": [
+          { "class": "card__col col-1", "figures": ["circles"] },
+          { "class": "card__col col-2", "figures": ["circles"] },
+          { "class": "card__col col-3", "figures": ["circles"] },
+          { "class": "card__col col-4", "figures": ["circles"] }
+        ]
+      }
+    },
+    {
+      "title": "Soluciones",
+      "text": "Project Management - DevOps - SCRUM - Verificación de Id - ERP",
+      "design": {
+        "rows": [
+          { "class": "card__line line-3", "figures": ["squares", "squares", "squares", "squares", "squares", "squares"] },
+          { "class": "card__line line-4", "figures": ["squares", "squares", "squares", "squares", "squares", "squares"] },
+          { "class": "card__line line-5", "figures": ["squares", "squares", "squares", "squares", "squares", "squares"] }
+        ]
+      }
+    }
+  ]
+}

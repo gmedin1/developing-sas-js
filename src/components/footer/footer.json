@@ -1,0 +1,17 @@
+{
+  "map": "https://www.google.com/maps/embed/v1/place?key=AIzaSyDmg0HXVnsCOx8afUay5Y_A-QP09w8SOu8&q=Centro+Empresarial+Colpatria",
+  "title": "Contáctanos y conoce como podemos ayudarte",
+  "text": "¡Agenda con nosotros y demos vida a tus proyectos digitales!",
+  "address": [
+    "Calle 127a # 53a - 45",
+    "Centro Empresarial Colpatria",
+    "Piso 7, Oficina 114",
+    "Bogotá, Colombia"
+  ],
+  "emails": [
+    "proyectos@developing.com.co",
+    "katherin.echavarria@developing.com.co"
+  ],
+  "phones": ["+57 304 3911046", "+57 317 6455237", "+57 301 3979878"],
+  "copyright": "Todos los derechos reservados Developing S.A.S"
+}
