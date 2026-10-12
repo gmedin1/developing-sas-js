@@ -1,0 +1,82 @@
+// *** Hecho
+
+@use "../../scss/resets" as v;
+
+.facts {
+  background-color: v.$color-5;
+  color: v.$color-4;
+  display: grid;
+  font-size: v.$base-1;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2em;
+  justify-content: center;
+  padding: 4em 2em;
+  place-content: center;
+  margin: auto;
+
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
+  }
+
+  @include v.respond-to("phone") {
+    font-size: v.$base-2;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  // *** Tarjeta
+
+  .fact {
+    display: flex;
+    padding: 0 4em;
+
+    @include v.respond-to("phone") {
+      padding: 0;
+    }
+
+    // *** Barras Laterales
+
+    &__bar {
+      border-radius: 2em;
+      height: 10em;
+      width: 2em;
+    }
+
+    // *** Derecha / Izquierda
+
+    &__left,
+    &__right {
+      margin: 2em;
+    }
+
+    // *** Contenido
+
+    &__number {
+      font-family: v.$font-2, sans-serif;
+      font-size: 4em;
+      font-weight: 800;
+      margin-top: 0.5em;
+    }
+
+    &__text {
+      color: v.$color-10;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+// Control de Colores
+
+.bar-1 {
+  background-color: v.$color-1;
+}
+.bar-2 {
+  background-color: v.$color-2;
+}
+.bar-3 {
+  background-color: v.$color-3;
+}
+.bar-4 {
+  background-color: v.$color-7;
+}

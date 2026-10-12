@@ -1,0 +1,33 @@
+<!-- Header -->
+<header id="header" class="header">
+  <nav class="nav">
+    <div class="nav__brand">
+      <img class="nav__logo" src="{{img logo.src}}" alt="{{logo.alt}}" />
+      <h1 class="nav__company">{{company}}</h1>
+    </div>
+    <div class="nav__nav">
+      {{#each links}}
+        <a class="nav__option" href="{{href}}">{{label}}</a>
+      {{/each}}
+    </div>
+    <div class="nav__burger">
+      <div class="nav__bar"></div>
+      <div class="nav__bar"></div>
+      <div class="nav__bar"></div>
+    </div>
+  </nav>
+  <div class="slider">
+    {{#each slides}}
+      <div class="slider__slide {{this}}{{#if @first}} show{{/if}}"></div>
+    {{/each}}
+    <div class="slider__content">
+      <p class="slider__text">{{slider.text}}</p>
+      <p class="slider__list">{{slider.list}}</p>
+    </div>
+  </div>
+  <div class="control">
+    {{#each slides}}
+      <div class="control__dot{{#if @first}} fill{{/if}}"></div>
+    {{/each}}
+  </div>
+</header>

@@ -1,0 +1,13 @@
+{
+  "title": "Servicios",
+  "services": [
+    {
+      "title": "Branding",
+      "icon": "vector.png",
+      "items": ["Logos", "Diseño", "Benchmark"]
+    },
+    { "title": "Diseño Web", "icon": "web-design.png", "items": [] },
+    { "title": "UX/UI", "icon": "ui.png", "items": [] },
+    { "title": "Branding", "icon": "price-tag.png", "items": [] }
+  ]
+}

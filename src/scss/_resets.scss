@@ -1,0 +1,113 @@
+// *** Importar
+
+@use "sass:map";
+@use "sass:meta";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+// *** Fuentes
+
+$font-1: "Nunito";
+$font-2: "Montserrat";
+
+// *** Colores Corporativos
+
+$color-1: #2b9c88;
+$color-2: #172d54;
+$color-3: #1e4b65;
+
+// *** Colores Adicionales
+
+$color-4: #ffffff;
+$color-5: #000000;
+$color-6: #0c0e10;
+$color-7: #dd5724;
+$color-8: #172d54;
+$color-9: #444444;
+$color-10: #e0e0e0;
+$color-11:
+  #162b33 0%,
+  #203942 50%,
+  #264754 100%;
+$color-12: #ebebeb;
+$color-13: #6fcdbc;
+$color-14: #64799d;
+$color-15: #3d7ca0;
+$color-16: #12688d;
+$color-17: #a2481f;
+
+// *** Bases
+
+$base-1: 16px;
+$base-2: 14px;
+$base-3: 12px;
+
+// *** Breakpoints
+
+$breakpoint-1: 1400px;
+$breakpoint-2: 980px;
+$breakpoint-3: 720px;
+
+$breakpoints: (
+  "phone": (
+    max-width: 720px,
+  ),
+  "tablet": (
+    max-width: 980px,
+  ),
+  "desktop": (
+    max-width: 1400px,
+  ),
+) !default;
+
+// Resets
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  // border: 1px solid red;
+}
+
+body {
+  font-family: $font-1, sans-serif;
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// *** Mixins
+
+@mixin content {
+  inset: auto 0;
+  margin: 0 auto;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media #{ meta.inspect(map.get($breakpoints, $breakpoint)) } {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint Not Found! 404";
+  }
+}
+
+// *** Fade In
+
+// *** Modulos

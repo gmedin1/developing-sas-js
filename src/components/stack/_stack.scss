@@ -1,0 +1,86 @@
+@use "../../scss/resets" as v;
+
+.stack {
+  font-size: v.$base-1;
+  padding: 4em 2em;
+  margin: auto;
+  max-width: v.$breakpoint-1;
+
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
+  }
+
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
+  }
+
+  // *** Titulo
+
+  &__title {
+    color: v.$color-8;
+    font-family: v.$font-2, sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  // *** Wrapper
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include v.respond-to("tablet") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include v.respond-to("phone") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // *** Cards
+
+  &__card {
+    align-items: center;
+    display: flex;
+    margin: 2em;
+  }
+
+  // *** Icono
+
+  &__icon {
+    border: 3px solid black;
+    padding: 1em;
+    width: 6em;
+  }
+
+  // *** Texto
+
+  &__text {
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-left: 0.5em;
+    width: 100%;
+  }
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+  border: 3px solid v.$color-1;
+}
+
+.icon-4,
+.icon-5,
+.icon-6 {
+  border: 3px solid v.$color-2;
+}
+
+.icon-7,
+.icon-8,
+.icon-9 {
+  border: 3px solid v.$color-3;
+}

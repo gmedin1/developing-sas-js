@@ -1,0 +1,12 @@
+<!-- Stack -->
+<section class="stack">
+  <h2 class="stack__title">{{title}}</h2>
+  <div class="stack__wrapper">
+    {{#each items}}
+      <article class="stack__card">
+        <img class="stack__icon icon-{{inc @index}}" src="{{img icon}}" alt="" />
+        <p class="stack__text">{{text}}</p>
+      </article>
+    {{/each}}
+  </div>
+</section>

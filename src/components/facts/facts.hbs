@@ -1,0 +1,16 @@
+<!-- Hechos -->
+<section id="facts" class="facts">
+  {{#each facts}}
+    <article class="fact fact-{{inc @index}}">
+      <div class="fact__right">
+        <div class="fact__bar bar-{{inc @index}}"></div>
+      </div>
+      <div class="fact__left">
+        <h4 class="fact__number">
+          {{#if prefix}}{{prefix}} {{/if}}<span class="counter" data-target="{{target}}">0</span>%
+        </h4>
+        <p class="fact__text">{{text}}</p>
+      </div>
+    </article>
+  {{/each}}
+</section>

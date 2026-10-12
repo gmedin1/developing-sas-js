@@ -1,0 +1,26 @@
+{
+  "title": "Metodologia",
+  "icon": "graphic.png",
+  "processes": [
+    {
+      "title": "Análisis del Proyecto",
+      "description": "Entendemos las necesidades de tu negocio, gracias a la experiencia y talento de nuestros colaboradores."
+    },
+    {
+      "title": "Diseño de Soluciones",
+      "description": "Transformamos y prototipamos esas necesidades en soluciones que aportan valor a la organización."
+    },
+    {
+      "title": "Experiencia de Usuario",
+      "description": "Utilizamos metodologías como design thinking para hacer nuestras soluciones fáciles, intuitivas y de uso diario."
+    },
+    {
+      "title": "Agilismo",
+      "description": "Nos apalancamos en metodologías agiles de desarrollo para llevar al éxito todos nuestros proyectos."
+    },
+    {
+      "title": "Implementación",
+      "description": "Nuestro proceso de implementación impecable está enfocado en generar relaciones a largo plazo con nuestros clientes."
+    }
+  ]
+}

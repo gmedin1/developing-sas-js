@@ -1,0 +1,180 @@
+/*** Servicios */
+
+@use "../../scss/resets" as v;
+
+.services {
+  color: v.$color-8;
+  font-size: v.$base-1;
+  margin: 4em 0;
+
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
+  }
+
+  @include v.respond-to("phone") {
+    font-size: v.$base-2;
+  }
+
+  &__title {
+    font-family: v.$font-2, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  &__container {
+    background: url(../public/assets/img/services-background.jpeg) center / cover no-repeat;
+  }
+}
+
+.bubbles {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: v.$breakpoint-1;
+  padding: 2em;
+  width: 100%;
+}
+
+/*** Burbuja */
+
+.bubble {
+  align-items: center;
+  animation: wave 3s linear infinite;
+  background-image: linear-gradient(
+    90deg,
+    #6f9cd9 0%,
+    #938bbd 50%,
+    #bb789f 100%
+  );
+  border-radius: 40% 60% 40% 60% / 60% 60% 40% 40%;
+  display: flex;
+  flex-direction: column;
+  height: 16em;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 2em;
+  margin: 2em;
+  width: 16em;
+  z-index: 1000;
+}
+
+// Icono
+
+.bubble__icon {
+  width: 4em;
+}
+
+// Titulo del Servicio
+
+.bubble__title {
+  font-family: v.$font-2, sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.services .bubble:nth-child(2),
+.services .bubble:nth-child(3) {
+  align-self: flex-end;
+
+  @include v.respond-to("phone") {
+    align-self: center;
+  }
+}
+
+/*** Opciones */
+
+.bubble:hover .service__item {
+  opacity: 100;
+  transform: translateX(100%);
+
+  @include v.respond-to("phone") {
+    transform: translateY(200%);
+  }
+}
+
+.bubble:hover .service__item:nth-child(1) {
+  transition: all 0.6s ease;
+}
+
+.bubble:hover .service__item:nth-child(2) {
+  transition: all 1s ease;
+}
+
+.bubble:hover .service__item:nth-child(3) {
+  transition: all 1.2s ease;
+}
+
+.service__list .service__item:nth-child(3) {
+  transition: all 0.6s ease;
+}
+
+.service__list .service__item:nth-child(2) {
+  transition: all 1s ease;
+}
+
+.service__list .service__item:nth-child(1) {
+  transition: all 1.2s ease;
+}
+
+.service__list {
+  position: absolute;
+  right: 0;
+
+  @include v.respond-to("phone") {
+    display: flex;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.service__item {
+  letter-spacing: 1px;
+  opacity: 0;
+  position: relative;
+  padding: 1em;
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: -1;
+
+  @include v.respond-to("phone") {
+    padding: 0 0.5em;
+  }
+}
+
+.service__list .service__item:nth-child(2) {
+  margin-left: 1em;
+
+  @include v.respond-to("phone") {
+    margin-left: 0;
+  }
+}
+
+/*** Animaciones */
+
+@keyframes wave {
+  12.5% {
+    border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%;
+  }
+  25% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  37.5% {
+    border-radius: 55% 45% 55% 45% / 45% 45% 55% 55%;
+  }
+  50% {
+    border-radius: 60% 40% 60% 40% / 40% 40% 60% 60%;
+  }
+  62.5% {
+    border-radius: 55% 45% 55% 45% / 45% 45% 55% 55%;
+  }
+  75% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  87.5% {
+    border-radius: 45% 55% 45% 55% / 55% 55% 45% 45%;
+  }
+}

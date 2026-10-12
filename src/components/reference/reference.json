@@ -1,0 +1,11 @@
+{
+  "card": {
+    "title": "Estudio de Diseño",
+    "text": "Materializamos tus ideas con diseño profesional.",
+    "image": { "src": "red-smoke.png", "alt": "Red smoke floating" }
+  },
+  "info": {
+    "title": "Conoce las mejores alternativas para ti en terminos digitales",
+    "text": "Experiencia en distintas soluciones, tecnologías y herramientas que nos permite adaptarnos a tu objetivo de negocio."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "company": "Developing",
+  "logo": {
+    "src": "Developing-Main.png",
+    "alt": "developing s.a.s logo blanco"
+  },
+  "links": [
+    { "label": "Nosotros", "href": "https://developing.com.co/#about" },
+    { "label": "Servicios", "href": "https://developing.com.co/#services" },
+    { "label": "Referencias", "href": "https://developing.com.co/#processes" },
+    { "label": "Contáctanos", "href": "https://api.whatsapp.com/send/?phone=573013979878" }
+  ],
+  "slides": ["slide-1", "slide-2", "slide-3", "slide-4", "slide-5"],
+  "slider": {
+    "text": "Descubre infinidad de posibilidades que te llevan a la era digital.",
+    "list": "Diseño - Desarrollo - Marketing - Soluciones"
+  }
+}

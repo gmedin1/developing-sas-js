@@ -1,0 +1,17 @@
+<!-- About -->
+<section id="particles-js" class="about">
+  <div class="ribbon">
+    <h2 class="ribbon__text">{{ribbon}}</h2>
+    <div class="underline"></div>
+  </div>
+  <article id="about" class="about__data">
+    <div class="about__card">
+      {{#each stats}}
+        <div class="about__col">
+          <p class="about__up n-{{inc @index}}">{{value}}</p>
+          <p class="about__down">{{label}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </article>
+</section>

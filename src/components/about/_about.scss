@@ -1,0 +1,119 @@
+// *** Cinta.
+
+@use "../../scss/resets" as v;
+
+.ribbon {
+  padding: 2em;
+  position: relative;
+  z-index: 1000;
+
+  @include v.respond-to("phone") {
+    padding: 2em 0;
+  }
+
+  // *** Texto de la Cinta.
+
+  &__text {
+    font-size: 6em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include v.respond-to("tablet") {
+      font-size: 4em;
+    }
+
+    @include v.respond-to("phone") {
+      font-size: 2.5em;
+    }
+  }
+
+  // *** Delineado
+
+  & > .underline {
+    background-color: v.$color-7;
+    margin: auto;
+    height: 3px;
+    width: 30em;
+
+    @include v.respond-to("tablet") {
+      width: 25em;
+    }
+
+    @include v.respond-to("phone") {
+      width: 20em;
+    }
+  }
+}
+
+.about {
+  background-color: v.$color-5;
+  color: v.$color-4;
+  font-family: v.$font-2, sans-serif;
+  font-size: v.$base-1;
+  font-weight: 800;
+  padding: 4em 0;
+  position: relative;
+
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
+  }
+
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
+  }
+
+  // *** Data
+
+  &__data {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 2em;
+    position: relative;
+    margin: 10em auto 6em auto;
+    max-width: v.$breakpoint-1;
+    z-index: 1000;
+  }
+
+  // *** Tarjetas
+
+  &__card {
+    background-color: v.$color-6;
+    columns: 3;
+    gap: 2em;
+    padding: 4em;
+
+    @include v.respond-to("phone") {
+      columns: 1;
+    }
+  }
+
+  // *** Columnas
+
+  &__col {
+    break-inside: avoid;
+
+    @include v.respond-to("phone") {
+      margin: 2em 0;
+    }
+  }
+
+  &__col > * {
+    text-align: center;
+  }
+
+  &__up {
+    font-size: 4em;
+  }
+
+  &__down {
+    font-size: 2.5em;
+  }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}

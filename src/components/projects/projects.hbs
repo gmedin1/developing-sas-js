@@ -1,0 +1,18 @@
+<!-- Proyectos -->
+<section id="projects" class="projects">
+  <h2 class="projects__title">{{title}}</h2>
+  <div class="projects__container">
+    {{#each projects}}
+      <article class="project">
+        <div class="project__col col-1">
+          <div class="project__circle"></div>
+        </div>
+        <div class="project__col col-2">
+          <h2 class="project__client">{{client}}</h2>
+          <p class="project__description">{{description}}</p>
+          <a href="{{link}}"></a>
+        </div>
+      </article>
+    {{/each}}
+  </div>
+</section>

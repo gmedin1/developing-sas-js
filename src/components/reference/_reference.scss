@@ -1,0 +1,154 @@
+// *** Referencia a Start Ups
+
+@use "../../scss/resets" as v;
+
+.reference {
+  align-items: center;
+  background-color: v.$color-5;
+  display: flex;
+  flex-direction: column;
+  font-size: v.$base-1;
+  justify-content: center;
+  padding: 4em 2em;
+
+  @include v.respond-to("tablet") {
+    font-size: v.$base-2;
+  }
+
+  @include v.respond-to("phone") {
+    font-size: v.$base-3;
+  }
+
+  // *** Tarjeta
+
+  &__card {
+    align-items: center;
+    background-color: v.$color-4;
+    border-radius: 2em;
+    color: v.$color-8;
+    display: flex;
+    justify-content: space-between;
+    height: 30em;
+    padding: 4em;
+    max-width: v.$breakpoint-1;
+    width: 100%;
+
+    @include v.respond-to("phone") {
+      flex-direction: column;
+      padding: 1.1em;
+      height: fit-content;
+    }
+  }
+
+  // *** Bloques de la Tarjeta
+
+  &__left,
+  &__right {
+    height: 100%;
+    margin: 0 2em;
+    width: 50%;
+
+    @include v.respond-to("phone") {
+      width: 100%;
+
+      & > * {
+        text-align: center;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__right {
+    @include v.respond-to("phone") {
+      display: none;
+    }
+  }
+
+  // *** Textos
+
+  &__title {
+    font-family: v.$font-2, sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+  }
+
+  &__reference {
+    font-family: v.$font-2, sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    margin-top: 2em;
+
+    @include v.respond-to("phone") {
+      margin-top: 1em;
+    }
+  }
+
+  &__text {
+    color: v.$color-9;
+    letter-spacing: 1px;
+    margin: 2em 0;
+
+    @include v.respond-to("phone") {
+      margin-bottom: 0;
+    }
+  }
+
+  // *** Imagen
+
+  &__img {
+    height: inherit;
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+// *** General
+
+.info {
+  align-items: center;
+  display: flex;
+  color: v.$color-4;
+  justify-content: center;
+  padding: 2em;
+  margin-top: 4em;
+  max-width: v.$breakpoint-1;
+  width: 100%;
+
+  @include v.respond-to("phone") {
+    flex-direction: column;
+  }
+
+  &__left,
+  &__right {
+    height: 100%;
+    margin: 2em;
+    width: 50%;
+
+    @include v.respond-to("phone") {
+      margin: 2em 0;
+      width: 100%;
+    }
+  }
+
+  // Derecha
+
+  &__title {
+    font-family: v.$font-2, sans-serif;
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  // Izquierda
+
+  &__text {
+    color: v.$color-10;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}

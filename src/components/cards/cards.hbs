@@ -1,0 +1,22 @@
+<!-- Tarjetas -->
+<section id="cards" class="cards">
+  <h2 class="cards__title">{{title}}</h2>
+  <div class="cards__wrapper">
+    {{#each cards}}
+      <section class="card">
+        <h3 class="card__title">{{title}}</h3>
+        <p class="card__text">{{text}}</p>
+        {{! Figuras decorativas: cada fila es un contenedor con sus figuras }}
+        <div class="card__design{{#if design.class}} {{design.class}}{{/if}}">
+          {{#each design.rows}}
+            <div class="{{class}}">
+              {{#each figures}}
+                <div class="card__figure {{this}}"></div>
+              {{/each}}
+            </div>
+          {{/each}}
+        </div>
+      </section>
+    {{/each}}
+  </div>
+</section>

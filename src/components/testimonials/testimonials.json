@@ -1,0 +1,25 @@
+{
+  "title": "Testimonios",
+  "testimonials": [
+    {
+      "client": "Distribuciones Cajica",
+      "logo": "distribuciones-cajica-logo.png",
+      "skills": ["Diseño", "Desarrollo"]
+    },
+    {
+      "client": "Multidatos ERP",
+      "logo": "multidatos-logo.png",
+      "skills": ["Diseño", "Desarrollo"]
+    },
+    {
+      "client": "Estandar Textil",
+      "logo": "estandar-textil-logo.png",
+      "skills": ["Diseño", "Desarrollo"]
+    },
+    {
+      "client": "Trackgenix",
+      "logo": "trackgenix-logo.png",
+      "skills": ["Diseño", "Desarrollo"]
+    }
+  ]
+}

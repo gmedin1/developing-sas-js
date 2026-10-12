@@ -1,0 +1,14 @@
+{
+  "title": "Stack",
+  "items": [
+    { "icon": "infraestructura.png", "text": "Infraestructura" },
+    { "icon": "software.png", "text": "Desarrollo de Software" },
+    { "icon": "automatizacion.png", "text": "Automatización" },
+    { "icon": "e-commerce-shopping-cart-tool.png", "text": "E-Commerce" },
+    { "icon": "web-design.png", "text": "Diseño Web" },
+    { "icon": "consulting.png", "text": "Servicios de Consultoría" },
+    { "icon": "document.png", "text": "Verificación de Documentos" },
+    { "icon": "fingerprint.png", "text": "Biometricos" },
+    { "icon": "face-detection.png", "text": "Verificación de Usuarios" }
+  ]
+}

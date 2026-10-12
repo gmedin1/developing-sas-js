@@ -1,0 +1,22 @@
+{
+  "facts": [
+    {
+      "target": 87,
+      "text": "de los negocios dicen que la Transformación Digital es una oportunidad competitiva."
+    },
+    {
+      "prefix": "Más del",
+      "target": 88,
+      "text": "de las empresas desean experimentar una transformación digital."
+    },
+    {
+      "prefix": "Solo el",
+      "target": 50,
+      "text": "de los ejecutivos está totalmente de acuerdo en adoptar tiene una estrategia digital clara y coherente."
+    },
+    {
+      "target": 71,
+      "text": "de las empresas con madurez digital dicen atraer nuevos clientes y mejor talento."
+    }
+  ]
+}
